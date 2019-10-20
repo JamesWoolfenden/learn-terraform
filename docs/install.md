@@ -18,9 +18,11 @@ Using the Chocolatey package manager
 cinst Terraform
 ```
 
+You'll need to update your path to pick up the exe.
+
 ### Ubuntu Linux/Multipass Or WSL (Windows Sub-system for Linux)
 
-There's no offical package managers supported <https://github.com/hashicorp/terraform/issues/17794>, it's just the binaries.
+There's still no offical package manager support <https://github.com/hashicorp/terraform/issues/17794>, it's just the binaries.
 
 ```bash
 export TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
