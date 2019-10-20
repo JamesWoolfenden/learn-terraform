@@ -20,7 +20,7 @@ terraform -v
 
 You'll need to update your path to pick up the exe on Windows.
 
-There's still no offical package manager support <https://github.com/hashicorp/terraform/issues/17794>, it's just the binaries.
+There's still no offical package manager support on linux <https://github.com/hashicorp/terraform/issues/17794>, so it's just the binaries.
 
 Terraform is now installed, the next step is to try running it, to do any useful work this would be against and using a cloud provider, and that requires Authentication.
 
@@ -29,6 +29,14 @@ Terraform is now installed, the next step is to try running it, to do any useful
 ### Basic Authentication with the AWS Provider
 
 Install the AWS Cli and add your Key and Secret.
+```mac tab="mac"
+brew install awss-cli
+```
+
+```powershell tab="Powershell"
+cinst aws-cli
+```
+You will either be supplied you cli credentiasl by your administrator or you can obtain your own from your own user IAM section.
 
 ```cli
 $ aws configure
@@ -160,7 +168,7 @@ All other commands:
     state              Advanced state management
 ```
 
-Thats a lot of commands, however there are only handful of actually common commands, 90% of the time it is an just terraform and:
+That's a lot of commands, however there are only handful of actually common commands, 90% of the time it is an just terraform and:
 
 ### init
 
@@ -326,15 +334,13 @@ When you have multiple Terraform projects and environments, that can end up bein
 
 ### Setting up a Windows plug-in cache
 
-```powershell
+```powershell tab="powershell"
 ni $env:APPDATA\terraform.rc
 Add-Content $env:APPDATA\terraform.rc "plugin_cache_dir   = `"$HOME\\.terraform.d\\plugin-cache`""
 mkdir "$HOME/.terraform.d/plugin-cache"
 ```
 
-### *nix plug-in cache
-
-```shell
+```shell tab="*nix"
 touch ~/.terraformrc
 echo plugin_cache_dir = \"$HOME/.terraform.d/plugin-cache\" >> ~/.terraformrc
 mkdir "$HOME/.terraform.d/plugin-cache"
@@ -342,5 +348,5 @@ mkdir "$HOME/.terraform.d/plugin-cache"
 
 ### Extras
 
-- WSL
+- WSL windows sub-sytem for linux
 - how to set up WSL
