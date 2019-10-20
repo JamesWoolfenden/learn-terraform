@@ -2,7 +2,7 @@
 
 Terraform is available from the popular platform package managers for Macs and Windows.
 
-```mac tab-"mac"
+```mac tab="mac"
 brew install terraform
 ```
 
