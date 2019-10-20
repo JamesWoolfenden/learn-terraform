@@ -1,0 +1,6 @@
+site_name: Learn Terraform
+nav:
+    - Home: index.md
+    - Help: help.md
+    - About: about.md
+theme: material

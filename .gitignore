@@ -1,0 +1,15 @@
+# Cache objects
+packer_cache/
+output-virtualbox-iso/
+ISO/
+.vagrant/
+.terraform/
+site/
+
+# For built boxes
+*.box
+*.orig
+*.tar
+*.tfstate
+*.tfstate
+*.backup
