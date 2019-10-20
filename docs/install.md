@@ -2,35 +2,25 @@
 
 Terraform is available from the popular platform package managers for Macs and Windows.
 
-## Mac
-
-From Brew
-
-```cli
+```mac tab-"mac"
 brew install terraform
 ```
 
-## Windows
-
-Using the Chocolatey package manager
-
-```cli
+```powershell tab="Powershell"
 cinst Terraform
 ```
 
-You'll need to update your path to pick up the exe.
-
-### Ubuntu Linux/Multipass Or WSL (Windows Sub-system for Linux)
-
-There's still no offical package manager support <https://github.com/hashicorp/terraform/issues/17794>, it's just the binaries.
-
-```bash
+```bash tab="linux"
 export TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
 curl --silent --output terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 unzip terraform.zip ; rm -f terraform.zip; chmod +x terraform
 mkdir -p ${HOME}/bin ; export PATH=${PATH}:${HOME}/bin; mv terraform ${HOME}/bin/
 terraform -v
 ```
+
+You'll need to update your path to pick up the exe on Windows.
+
+There's still no offical package manager support <https://github.com/hashicorp/terraform/issues/17794>, it's just the binaries.
 
 Terraform is now installed, the next step is to try running it, to do any useful work this would be against and using a cloud provider, and that requires Authentication.
 

@@ -6,7 +6,11 @@ nav:
     - Syntax: syntax.md
     - Help: help.md
     - About: about.md
-theme: material
+theme: 
+  name: material
+  favicon: 'assets/images/favicon.png'
+repo_name: 'jamesWoolfenden/learn-packer-web'
+repo_url: 'https://github.com/jamesWoolfenden/learn-terraform-web'
 markdown_extensions:
   - admonition
   - codehilite
@@ -27,3 +31,16 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+# Customization
+extra:
+  manifest: 'manifest.webmanifest'
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/slalom'
+    - type: 'linkedin'
+      link: 'https://linkedin.com/company/slalom-consulting/'
+
+# Copyright
+copyright: 'Copyright &copy; 2019 - 2019 Slalom, LLC'
+site_author: 'James Woolfenden'
