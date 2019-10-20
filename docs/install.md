@@ -29,6 +29,7 @@ Terraform is now installed, the next step is to try running it, to do any useful
 ### Basic Authentication with the AWS Provider
 
 Install the AWS Cli and add your Key and Secret.
+
 ```mac tab="mac"
 brew install awss-cli
 ```
@@ -36,6 +37,7 @@ brew install awss-cli
 ```powershell tab="Powershell"
 cinst aws-cli
 ```
+
 You will either be supplied you cli credentiasl by your administrator or you can obtain your own from your own user IAM section.
 
 ```cli
