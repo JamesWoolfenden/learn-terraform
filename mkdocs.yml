@@ -12,7 +12,7 @@ nav:
     - About: about.md
 theme: 
   name: material
-  favicon: 'assets/images/favicon.png'
+  favicon: 'assets/images/favicon.ico'
 repo_name: 'jamesWoolfenden/learn-packer-web'
 repo_url: 'https://github.com/jamesWoolfenden/learn-terraform-web'
 markdown_extensions:

@@ -154,7 +154,6 @@ Now rerun and verify the desired state.
 
 ```terraform
 $ terraform plan
-
 aws_vpc.main: Refreshing state... (ID: vpc-0382578ed3cd51dcc)
 
 ------------------------------------------------------------------------
@@ -267,4 +266,3 @@ Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
 Help documents for Terraform AWS Virtual Private Cloud (VPC) object are here <https://www.terraform.io/docs/providers/aws/r/vpc.html>
 
 VPC designs <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html>
-

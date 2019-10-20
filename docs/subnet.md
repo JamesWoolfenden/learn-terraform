@@ -147,4 +147,3 @@ Not only can you get Design patterns to create your base networking, but you can
 
 Links:
 <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html>
-
