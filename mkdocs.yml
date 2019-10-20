@@ -7,7 +7,22 @@ nav:
     - Making a VPC:
       - AWS: aws-vpc.md
       - GCP: gcp-vpc.md
-    - Creating a subnet: subnet.md
+    - Creating a Subnet: subnet.md
+    - Creating an Instance: instance.md
+    - Autoscaling: autoscaling.md
+    - Load Balancing:
+      - Application: alb.md
+    - Databases: 
+      - RDS: rds.md
+    - Storage:
+      - S3: s3.md
+    - IAM:
+      - AWS: aws-iam.md
+      - GCP: gcp-iam.md
+    - DNS:
+      - AWS: aws-dns.md
+    - Advanced State: adv-state.md
+    - Creating Modules: module.md
     - Help: help.md
     - About: about.md
 theme: 
