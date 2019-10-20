@@ -1,6 +1,8 @@
 site_name: Learn Terraform
 nav:
-    - Home: index.md
+    - Home: Intro.md
+    - State: state.md
+    - Syntax: syntax.md
     - Help: help.md
     - About: about.md
 theme: material
