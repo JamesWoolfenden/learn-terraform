@@ -23,15 +23,15 @@ Templates are designed in Hashicorp Configuration Language (HCL) to describe how
 
 ### Your own scripts
 
-Probably wont makes sense to even you six months later, god forbid you have use someone elses or they yours.
+Probably won't makes sense to even you six months later, god forbid you have use someone elses or they yours.
 
 ### Puppet and Chef
 
-These are the old guard or the v1.0 CM Tools, slow to run, slow to apply, lots of agents and lots of set-up.
+These are the old guard or the v1.0 CM Tools, lots of agents and lots of set-up.
 
 ### Ansible
 
-No Servers and No Agents, but still quite slow. A very useful tool for configuration and in combination with Packer and Terraform.
+No Servers and No Agents. A very useful tool for configuration and in combination with Packer and Terraform.
 <https://www.ansible.com/>
 
 ### CloudFoundry
@@ -48,7 +48,7 @@ Popular with some AWS Consultants.
 
 ### Pulumi
 
-Your code for infrastructure, support for Python and JS. If you can't get your head around the declarative approach of Terraform.
+Your code for infrastructure, support for Python and JS. If you can't get your head around the declarative approach of Terraform, this ones for you.
 <https://www.pulumi.com/>
 
 ### The Console
