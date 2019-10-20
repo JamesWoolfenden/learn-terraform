@@ -15,7 +15,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/learn-terrafor
 
 ## Copyrights
 
-Copyright Â© 2019-2019 [Slalom, LLC](https://slalom.com)
+Copyright (c) 2019-2019 [Slalom, LLC](https://slalom.com)
 
 ## License
 
