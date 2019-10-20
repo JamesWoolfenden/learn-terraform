@@ -1,6 +1,7 @@
 site_name: Learn Terraform
 nav:
     - Home: index.md
+    - Install: install.md
     - State: state.md
     - Syntax: syntax.md
     - Help: help.md
