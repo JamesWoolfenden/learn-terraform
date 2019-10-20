@@ -4,6 +4,10 @@ nav:
     - Install: install.md
     - State: state.md
     - Syntax: syntax.md
+    - Making a VPC:
+      - AWS: aws-vpc.md
+      - GCP: gcp-vpc.md
+    - Creating a subnet: subnet.md
     - Help: help.md
     - About: about.md
 theme: 
