@@ -209,8 +209,15 @@ rm $name/.git -rf
 - Start off and create a scaffold
 ```
 $ scaffold terraform-aws-s3
+Cloning into 'terraform-aws-s3'...
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 14 (delta 0), reused 8 (delta 0), pack-reused 0
+Receiving objects: 100% (14/14), done.
+C:\code\terraform-aws-s3 [master +11 ~0 -0 ~]>
 ```
-
+- enable the pre-commit
 - add s3 resource
 - update variables.tf
 - update outputs.tf
