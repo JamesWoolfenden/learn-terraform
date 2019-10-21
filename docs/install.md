@@ -126,7 +126,7 @@ names = [
 ]
 ```
 
-You now have you gcp auth set-up.
+You now have your GCP auth set-up.
 
 ## Terraform commands
 
@@ -172,7 +172,7 @@ All other commands:
 
 That's a lot of commands, however there are only handful of actually common commands, 90% of the time it is an just terraform and:
 
-### init
+### Init
 
 This command sets up the project, gets providers and connects any defined backends.
 
@@ -210,7 +210,7 @@ plugins/
 The modules folder hold a copy of the terraform modules that you are using.
 The plugins hold the downloaded copies of the executable providers.
 
-### plan
+### Plan
 
 What will happen on an Apply;
 
@@ -327,26 +327,24 @@ TODO:show where changes/destroyed
 
 And usually in this order.
 
-### Tip
+!!!Note "Speeding up your Terraform builds and development"
+    
+    When you use Terraform The first step and command in the **Terraform init** this process cuases the appropriate provider executables to be downloaded.
+    When you have multiple Terraform projects and environments, that can end up being a lot of copying and downloading, even if you don't **terraform init** that often. A better way is to set up and use a provider cache.
+    
+    ### Setting up a Windows plug-in cache
 
-### Speeding up your Terraform builds and development
-
-When you use Terraform The first step and command in the **Terraform init** this process cuases the appropriate provider executables to be downloaded.
-When you have multiple Terraform projects and environments, that can end up being a lot of copying and downloading, even if you don't **terraform init** that often. A better way is to set up and use a provider cache.
-
-### Setting up a Windows plug-in cache
-
-```powershell tab="powershell"
-ni $env:APPDATA\terraform.rc
-Add-Content $env:APPDATA\terraform.rc "plugin_cache_dir   = `"$HOME\\.terraform.d\\plugin-cache`""
-mkdir "$HOME/.terraform.d/plugin-cache"
-```
-
-```shell tab="*nix"
-touch ~/.terraformrc
-echo plugin_cache_dir = \"$HOME/.terraform.d/plugin-cache\" >> ~/.terraformrc
-mkdir "$HOME/.terraform.d/plugin-cache"
-```
+    ```powershell tab="powershell"
+    ni $env:APPDATA\terraform.rc
+    Add-Content $env:APPDATA\terraform.rc "plugin_cache_dir   = `"$HOME\\.terraform.d\\plugin-cache`""
+    mkdir "$HOME/.terraform.d/plugin-cache"
+    ```
+    
+    ```shell tab="*nix"
+    touch ~/.terraformrc
+    echo plugin_cache_dir = \"$HOME/.terraform.d/plugin-cache\" >> ~/.terraformrc
+    mkdir "$HOME/.terraform.d/plugin-cache"
+    ```
 
 ### Extras
 
