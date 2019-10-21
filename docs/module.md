@@ -223,8 +223,69 @@ C:\code\terraform-aws-s3 [master +11 ~0 -0 ~]>
 ```
 
 - enable the pre-commit
-- add s3 resource
-- update variables.tf
+Pre-commit need to be in installed one time, folling the instructions [Pre-commit](https://pre-commit.com/)
+
+```python
+pip install pre-commit
+```
+In the root of **terraform-aws-s3**:
+
+```shell
+pre-commit install
+```
+
+Now any edits and the subsequent commit will trigger the hook.
+
+- add S3 resource
+The the following as **aws_s3_bucket.bucket.tf**
+
+```terraform
+resource "aws_s3_bucket" "bucket" {
+  bucket        = var.s3_bucket_name
+  policy        = var.s3_bucket_policy
+  acl           = var.s3_bucket_acl
+  force_destroy = var.s3_bucket_force_destroy
+
+  tags = var.common_tags
+}
+```
+
+- update **variables.tf**
+
+```terraform
+  
+variable "common_tags" {
+  description = "This is a map type for applying tags on resources"
+  type        = map
+}
+
+variable "s3_bucket_name" {
+  description = "The name of the bucket"
+  type        = string
+}
+
+variable "s3_bucket_force_destroy" {
+  description = "String Boolean to set bucket to be undeletable (well more difficult anyway)"
+  type        = string
+}
+
+variable "s3_bucket_acl" {
+  default     = "private"
+  description = "Acl on the bucket"
+  type        = string
+}
+
+variable "s3_bucket_policy" {
+  description = "The IAM policy for the bucket"
+  type        = string
+}
+
+
+locals {
+  env = substr(var.common_tags["environment"], 0, 1)
+}
+```
+
 - update outputs.tf
 - add example
 - test example
