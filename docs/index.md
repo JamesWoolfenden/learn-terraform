@@ -43,7 +43,7 @@ Popular with some AWS Consultants.
 
 ### [Pulumi](https://www.pulumi.com/)
 
-If your want to code your infrastructure in language you already know, with support for Python and JS. Great for small teams with no specialised experience and if you can't get your head around the declarative approach of Terraform, this ones for you.
+If you want to code your infrastructure in a language you already know, this is for you, with support for Python and JS. Great for small teams with no specialised infra experience and if you can't get your head around the declarative approach of Terraform, this ones for you.
 
 ### Your own scripts
 
