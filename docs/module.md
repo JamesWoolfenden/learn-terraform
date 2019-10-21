@@ -61,6 +61,7 @@ You can use the Git CLI, to tag your modules, when inside the Repository at the 
 git tag -a "0.0.1" -m "Initial commit"
 git push --follow-tags
 ```
+
 Or have your own CI process for your modules.
 You need to tag and then push the tag to the upstream repository.
 
@@ -159,6 +160,7 @@ after_success:
 ```
 
 ### Scaffold
+
 Add a function to your profile to add a function to your shell. That's $PROFILE on Windows or ~/.bashrc on Linix.
 
 ```powershell tab="powershell"
@@ -168,7 +170,7 @@ function scaffold {
       [string]$name)
 
    if (!(test-path .\$name))
-   {   
+   {
       git clone --depth=1 git@github.com:JamesWoolfenden/tf-scaffold.git "$name"
    }
    else{
@@ -181,6 +183,7 @@ function scaffold {
    git init|git add -A
 }
 ```
+
 ```bash tab="bash"
 function scaffold() {
 if [ -z "$1" ]
@@ -207,7 +210,8 @@ rm $name/.git -rf
 ### Creating a simple module
 
 - Start off and create a scaffold
-```
+  
+```shell
 $ scaffold terraform-aws-s3
 Cloning into 'terraform-aws-s3'...
 remote: Enumerating objects: 14, done.
@@ -217,6 +221,7 @@ remote: Total 14 (delta 0), reused 8 (delta 0), pack-reused 0
 Receiving objects: 100% (14/14), done.
 C:\code\terraform-aws-s3 [master +11 ~0 -0 ~]>
 ```
+
 - enable the pre-commit
 - add s3 resource
 - update variables.tf
