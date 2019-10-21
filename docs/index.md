@@ -21,35 +21,33 @@ Templates are designed in Hashicorp Configuration Language (HCL) to describe how
 
 ## Alternatives
 
-### Your own scripts
+In no particular order:
 
-Probably won't makes sense to even you six months later, god forbid you have use someone elses or they yours.
-
-### Puppet and Chef
+### [Puppet](https://puppet.com/) and [Chef](https://www.chef.io/)
 
 These are the old guard or the v1.0 CM Tools, lots of agents and lots of set-up.
 
-### Ansible
+### [Ansible](https://www.ansible.com/)
 
 No Servers and No Agents. A very useful tool for configuration and in combination with Packer and Terraform.
-<https://www.ansible.com/>
 
-### CloudFoundry
+### [CloudFoundry](https://www.cloudfoundry.org/)
 
-<https://www.cloudfoundry.org/>
+### [Salt Stack](https://www.saltstack.com/)
 
-### Salt Stack
-
-More popular the otherside of the Atlantic, very rare in London/SE <https://www.saltstack.com/>.
+More popular the otherside of the Atlantic, very rare in London/SE.
 
 ### Cloudformation
 
 Popular with some AWS Consultants.
 
-### Pulumi
+### [Pulumi](https://www.pulumi.com/)
 
-Your code for infrastructure, support for Python and JS. If you can't get your head around the declarative approach of Terraform, this ones for you.
-<https://www.pulumi.com/>
+If your want to code your infrastructure in language you already know, with support for Python and JS. Great for small teams with no specialised experience and if you can't get your head around the declarative approach of Terraform, this ones for you.
+
+### Your own scripts
+
+Probably won't makes sense to even you six months later, god forbid you have use someone elses or they yours.
 
 ### The Console
 
