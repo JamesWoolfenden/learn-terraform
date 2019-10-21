@@ -115,12 +115,101 @@ I use tf_scaffold to create new modules and this always adds a pre-commit file. 
 
 ### Test/reference implementation
 
-I have a build/intregration test that builds and destroys one of my modules examples before it tags the module.
+I have a build/intregration test that builds and destroys one of my modules examples before it tags the module. I am currently using Travis for building, testing and labelling my modules, other CI tools would also work <https://github.com/JamesWoolfenden/terraform-gcp-bastion/blob/master/.travis.yml>
+
+```yaml
+
+dist: trusty
+sudo: required
+services:
+  - docker
+branches:
+  only:
+    - master
+
+env:
+  - VERSION="0.1.$TRAVIS_BUILD_NUMBER"
+
+addons:
+  apt:
+    packages:
+      - git
+      - curl
+
+before_script:
+- export TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
+- curl --silent --output terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
+- unzip terraform.zip ; rm -f terraform.zip; chmod +x terraform
+- mkdir -p ${HOME}/bin ; export PATH=${PATH}:${HOME}/bin; mv terraform ${HOME}/bin/
+- terraform -v
+
+script:
+- terraform init -get-plugins -backend=false -input=false
+- terraform init -get -backend=false -input=false
+- terraform fmt
+- bash validate.sh
+
+
+after_success:
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - export GIT_TAG=$VERSION
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $VERSION"
+  - git push --quiet https://$TAGAUTH@github.com/jameswoolfenden/terraform-gcp-bastion $GIT_TAG > /dev/null 2>&
+```
+
+### Scaffold
+Add a function to your profile to add a function to your shell. That's $PROFILE on Windows or ~/.bashrc on Linix.
+
+```powershell tab="powershell"
+function scaffold {
+   param(
+      [parameter(mandatory=$true)]
+      [string]$name)
+
+   if (!(test-path .\$name))
+   {   
+      git clone --depth=1 git@github.com:JamesWoolfenden/tf-scaffold.git "$name"
+   }
+   else{
+      write-warning "Path $name already exists"
+      return
+   }
+
+   rm "$name\.git" -recurse -force
+   cd $name
+   git init|git add -A
+}
+```
+```bash tab="bash"
+function scaffold() {
+if [ -z "$1" ]
+then
+   name="scaffold"
+else
+   name=$1
+fi
+
+if [ -z "$2" ]
+then
+   branch="master"
+else
+   branch=$2
+fi
+
+
+echo "git clone --depth=1 --branch $branch git@github.com:JamesWoolfenden/tf-scaffold.git $name"
+git clone --depth=1 --branch $branch git@github.com:JamesWoolfenden/tf-scaffold.git $name
+rm $name/.git -rf
+}
+```
 
 ### Creating a simple module
 
-- Create a scaffold
-tf scaffold terraform-aws-s3
+- Start off and create a scaffold
+```
+$ scaffold terraform-aws-s3
+```
 
 - add s3 resource
 - update variables.tf
