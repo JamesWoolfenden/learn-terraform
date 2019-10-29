@@ -2,89 +2,89 @@
 # yamllint disable rule:indentation
 site_name: Learn Terraform
 nav:
-    - Home: index.md
-    - Install: install.md
-    - State: state.md
-    - Syntax: syntax.md
-    - Making a VPC:
-          - AWS: aws-vpc.md
-          - GCP:
-                - basic: gcp-vpc.md
-                - peering: gcp-vpc-peering.md
-                - multiple: gcp-vpc-multiple.md
-    - Creating a Subnet:
-          - AWS: aws-subnet.md
-          - GCP: gcp-subnet.md
-    - Gateways:
-          - GCP: gcp-natgateway.md
-    - Creating an Instance:
-          - AWS: aws-instance.md
-    - Autoscaling:
-          - AWS: aws-autoscaling.md
-    - Load Balancing:
-          - AWS:
-                - Application: aws-alb.md
-          - GCP:
-                - main: gcp-loadbalancers.md
-                - http: gcp-http-ln.md
-                - internal: gcp-internalloadbalancer.md
-    - Databases:
-          - RDS: aws-rds.md
-    - Storage:
-          - S3: aws-s3.md
-    - IAM:
-          - AWS: aws-iam.md
-          - GCP: gcp-iam.md
-    - DNS:
-          - Route 53 [AWS]: aws-dns.md
-    - Advanced State: adv-state.md
-    - Creating Modules: module.md
-    - SourceCode:
-          - CodeCommit [AWS]: aws-codecommit.md
-          - Cloud source [GCP]: gcp-source.md
-    - Containers:
-          - GCP:
-                - GKE: gcp-kubernetes.md
-    - Logging:
-          - Cloudwatch [AWS]: aws-cloudwatch.md
-          - Stackdriver [GCP]: gcp-stackdriver.md
-    - Help: help.md
-    - About: about.md
+  - Home: index.md
+  - Install: install.md
+  - State: state.md
+  - Syntax: syntax.md
+  - Making a VPC:
+      - AWS: aws-vpc.md
+      - GCP:
+          - basic: gcp-vpc.md
+          - peering: gcp-vpc-peering.md
+          - multiple: gcp-vpc-multiple.md
+  - Creating a Subnet:
+      - AWS: aws-subnet.md
+      - GCP: gcp-subnet.md
+  - Gateways:
+      - GCP: gcp-natgateway.md
+  - Creating an Instance:
+      - AWS: aws-instance.md
+  - Autoscaling:
+      - AWS: aws-autoscaling.md
+  - Load Balancing:
+      - AWS:
+          - Application: aws-alb.md
+      - GCP:
+          - main: gcp-loadbalancers.md
+          - http: gcp-http-ln.md
+          - internal: gcp-internalloadbalancer.md
+  - Databases:
+      - RDS: aws-rds.md
+  - Storage:
+      - S3: aws-s3.md
+  - IAM:
+      - AWS: aws-iam.md
+      - GCP: gcp-iam.md
+  - DNS:
+      - Route 53 [AWS]: aws-dns.md
+  - Advanced State: adv-state.md
+  - Creating Modules: module.md
+  - SourceCode:
+      - CodeCommit [AWS]: aws-codecommit.md
+      - Cloud source [GCP]: gcp-source.md
+  - Containers:
+      - GCP:
+          - GKE: gcp-kubernetes.md
+  - Logging:
+      - Cloudwatch [AWS]: aws-cloudwatch.md
+      - Stackdriver [GCP]: gcp-stackdriver.md
+  - Help: help.md
+  - About: about.md
 theme:
-    name: material
-    favicon: 'assets/images/favicon.ico'
-repo_name: 'jamesWoolfenden/learn-packer-web'
-repo_url: 'https://github.com/jamesWoolfenden/learn-terraform-web'
+  name: material
+  favicon: "assets/images/favicon.ico"
+repo_name: "jamesWoolfenden/learn-packer-web"
+repo_url: "https://github.com/jamesWoolfenden/learn-terraform-web"
 markdown_extensions:
   - admonition
   - codehilite
   - meta
   - pymdownx.arithmatex
   - pymdownx.betterem:
-    smart_enable: all
+      smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-    emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.tasklist:
-    custom_checkbox: true
+      custom_checkbox: true
   - pymdownx.tilde
 
 # Customization
 extra:
-    manifest: 'manifest.webmanifest'
-    social:
-        - type: 'twitter'
-          link: 'https://twitter.com/slalom'
-        - type: 'linkedin'
-          link: 'https://linkedin.com/company/slalom-consulting/'
+  manifest: "manifest.webmanifest"
+  social:
+    - type: "twitter"
+      link: "https://twitter.com/slalom"
+    - type: "linkedin"
+      link: "https://linkedin.com/company/slalom-consulting/"
 
 # Copyright
-copyright: 'Copyright &copy; 2019 - 2019 Slalom, LLC'
-site_author: 'James Woolfenden'
+copyright: "Copyright &copy; 2019 - 2019 Slalom, LLC"
+site_author: "James Woolfenden"
