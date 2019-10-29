@@ -1,4 +1,4 @@
-# Creating an EC2 INstance
+# Creating an EC2 Instance
 
 ## Make an instance in a public sub-net
 

@@ -71,9 +71,9 @@ You need to tag and then push the tag to the upstream repository.
     ```cli
     git config --global push.followTags true
     ```
-    
+
     With the tags set and  pushed, you can now set the source reference to link to the tag:
-        
+
     ```terraform
     module "S3" {
         source="git::git@github.com:JamesWoolfenden/terraform-aws-s3.git?ref=0.0.1"
@@ -296,7 +296,7 @@ resource "aws_s3_bucket" "bucket" {
 ### Update **variables.tf**
 
 ```terraform
-  
+
 variable "common_tags" {
   description = "This is a map type for applying tags on resources"
   type        = map
@@ -384,12 +384,12 @@ Add all the contents to your new repository you created. There is a naming forma
 
 ## Extra credit
 
-- Publish and make it public 
-  
+- Publish and make it public
+
 - Connect up your Github account with the Terraform registry
 
 - Select a repository and publish
-  
+
 - Add build to Gitlab/Travis/Circleci
 
 - Tag it

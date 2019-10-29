@@ -6,23 +6,46 @@ nav:
     - Syntax: syntax.md
     - Making a VPC:
       - AWS: aws-vpc.md
-      - GCP: gcp-vpc.md
-    - Creating a Subnet: subnet.md
-    - Creating an Instance: instance.md
-    - Autoscaling: autoscaling.md
+      - GCP:
+        - basic: gcp-vpc.md
+        - peering: gcp-vpc-peering.md
+        - multiple: gcp-vpc-multiple.md
+    - Creating a Subnet: 
+      - AWS: aws-subnet.md
+      - GCP: gcp-subnet.md
+    - Gateways:
+      - GCP: gcp-natgateway.md
+    - Creating an Instance: 
+      - AWS: aws-instance.md
+    - Autoscaling: 
+      - AWS: aws-autoscaling.md
     - Load Balancing:
-      - Application: alb.md
+      - AWS:
+        - Application: aws-alb.md
+      - GCP:
+        - main: gcp-loadbalancers.md
+        - http: gcp-http-ln.md
+        - internal: gcp-internalloadbalancer.md         
     - Databases: 
-      - RDS: rds.md
+      - RDS: aws-rds.md
     - Storage:
-      - S3: s3.md
+      - S3: aws-s3.md
     - IAM:
       - AWS: aws-iam.md
       - GCP: gcp-iam.md
     - DNS:
-      - AWS: aws-dns.md
+      - Route 53 [AWS]: aws-dns.md
     - Advanced State: adv-state.md
     - Creating Modules: module.md
+    - SourceCode:
+      - CodeCommit [AWS]: aws-codecommit.md
+      - Cloud source [GCP]: gcp-source.md
+    - Containers:
+      - GCP:
+        - GKE: gcp-kubernetes.md
+    - Logging:
+      - Cloudwatch [AWS]: aws-cloudwatch.md
+      - Stackdriver [GCP]: gcp-stackdriver.md
     - Help: help.md
     - About: about.md
 theme: 

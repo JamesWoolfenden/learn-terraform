@@ -75,7 +75,8 @@ Terraform will perform the following actions:
 Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
-If your plan looks like above then you can process with terraform apply, by default this now repeats a plan first and then asks you if you want to proceed:
+If your plan looks like above then you can process with terraform apply,
+ by default this now repeats a plan first and then asks you if you want to proceed:
 
 ```Terraform
 An execution plan has been generated and is shown below.

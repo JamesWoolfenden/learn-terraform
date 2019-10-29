@@ -193,29 +193,29 @@ Create a role
 !!! note "Tip Seeing the changes in a policy"
 
     Before Terraform 0.12, when you Terraform planned it was very difficult to be sure that there was any change, the output was unlear.
-    
+
     ```Shell
       ~ module.codebuild.aws_iam_role_policy.codebuild_policy
           policy:   "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n
                     \"Action\": \"*\",\n      \"Resource\": [\n        \"arn:aws:s3:::aws-lexbot-handler-553700203877-artifacts/*\",\n
-                    \"arn:aws:s3:::aws-lexbot-handler-553700203877-artifacts\"\n      ]\n    },\n    {\n      \"Sid\": \"\",\n      
-                    \"Effect\": \"Allow\",\n      \"Action\": \"codebuild:*\",\n      \"Resource\": 
-                    \"arn:aws:codebuild:eu-west-1:553700203877:project/aws-lexbot-handler\"\n    },\n    {\n      \"Sid\": \"\",\n      
-                    \"Effect\": \"Allow\",\n      \"Action\": [\n        \"ssm:PutParameter\",\n        \"ssm:GetParameters\"\n      ],\n   
-                    \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        
-                    \"logs:PutLogEvents\",\n        \"logs:CreateLogStream\",\n        \"logs:CreateLogGroup\"\n      ],\n      
-                    \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        
-                    \"iam:PassRole\",\n        \"iam:ListRoles\"\n      ],\n      \"Resource\": \"*\"\n    }\n  ]\n}" => "{\n  \"Version\": 
+                    \"arn:aws:s3:::aws-lexbot-handler-553700203877-artifacts\"\n      ]\n    },\n    {\n      \"Sid\": \"\",\n
+                    \"Effect\": \"Allow\",\n      \"Action\": \"codebuild:*\",\n      \"Resource\":
+                    \"arn:aws:codebuild:eu-west-1:553700203877:project/aws-lexbot-handler\"\n    },\n    {\n      \"Sid\": \"\",\n
+                    \"Effect\": \"Allow\",\n      \"Action\": [\n        \"ssm:PutParameter\",\n        \"ssm:GetParameters\"\n      ],\n
+                    \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n
+                    \"logs:PutLogEvents\",\n        \"logs:CreateLogStream\",\n        \"logs:CreateLogGroup\"\n      ],\n
+                    \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n
+                    \"iam:PassRole\",\n        \"iam:ListRoles\"\n      ],\n      \"Resource\": \"*\"\n    }\n  ]\n}" => "{\n  \"Version\":
                     \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",
-                    \n      \"Resource\": [\n        \"arn:aws:s3:::aws-lexbot-handler-553700203877-artifacts/*\",\n        
-                    \"arn:aws:s3:::aws-lexbot-handler-553700203877-artifacts\"\n      ]\n    },\n    {\n      \"Sid\": \"\",\n      
-                    \"Effect\": \"Allow\",\n      \"Action\": \"codebuild:*\",\n      \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": 
-                    \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"ecr:*\",\n      \"Resource\": \"*\"\n    },\n    {\n      
-                    \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"ssm:PutParameter\",\n        
-                    \"ssm:GetParameters\"\n      ],\n      \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\": 
-                    \"Allow\",\n      \"Action\": [\n        \"logs:PutLogEvents\",\n        \"logs:CreateLogStream\",\n        
-                    \"logs:CreateLogGroup\"\n      ],\n      \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\": 
-                    \"Allow\",\n      \"Action\": [\n        \"iam:PassRole\",\n        \"iam:ListRoles\"\n      ],\n      \"Resource\": 
+                    \n      \"Resource\": [\n        \"arn:aws:s3:::aws-lexbot-handler-553700203877-artifacts/*\",\n
+                    \"arn:aws:s3:::aws-lexbot-handler-553700203877-artifacts\"\n      ]\n    },\n    {\n      \"Sid\": \"\",\n
+                    \"Effect\": \"Allow\",\n      \"Action\": \"codebuild:*\",\n      \"Resource\": \"*\"\n    },\n    {\n      \"Sid\":
+                    \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"ecr:*\",\n      \"Resource\": \"*\"\n    },\n    {\n
+                    \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"ssm:PutParameter\",\n
+                    \"ssm:GetParameters\"\n      ],\n      \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\":
+                    \"Allow\",\n      \"Action\": [\n        \"logs:PutLogEvents\",\n        \"logs:CreateLogStream\",\n
+                    \"logs:CreateLogGroup\"\n      ],\n      \"Resource\": \"*\"\n    },\n    {\n      \"Sid\": \"\",\n      \"Effect\":
+                    \"Allow\",\n      \"Action\": [\n        \"iam:PassRole\",\n        \"iam:ListRoles\"\n      ],\n      \"Resource\":
                     \"*\"\n    }\n  ]\n}"
     ```
 

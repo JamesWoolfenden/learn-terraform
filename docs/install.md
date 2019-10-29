@@ -328,10 +328,10 @@ TODO:show where changes/destroyed
 And usually in this order.
 
 !!!Note "Speeding up your Terraform builds and development"
-    
+
     When you use Terraform The first step and command in the **Terraform init** this process cuases the appropriate provider executables to be downloaded.
     When you have multiple Terraform projects and environments, that can end up being a lot of copying and downloading, even if you don't **terraform init** that often. A better way is to set up and use a provider cache.
-    
+
     ### Setting up a Windows plug-in cache
 
     ```powershell tab="powershell"
@@ -339,7 +339,7 @@ And usually in this order.
     Add-Content $env:APPDATA\terraform.rc "plugin_cache_dir   = `"$HOME\\.terraform.d\\plugin-cache`""
     mkdir "$HOME/.terraform.d/plugin-cache"
     ```
-    
+
     ```shell tab="*nix"
     touch ~/.terraformrc
     echo plugin_cache_dir = \"$HOME/.terraform.d/plugin-cache\" >> ~/.terraformrc
