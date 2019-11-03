@@ -59,18 +59,9 @@ provider "aws" {
 }
 ```
 
-Open the sub-folder **basic-aws-auth** in your console. Validate your auth set-up by executing **terraform init** and then apply:
+Open the sub-folder **basic-aws-auth** in your console. Validate your auth set-up by executing **terraform init** and then **terraform apply**:
 
-```cli
-$ terraform apply
-data.aws_caller_identity.current: Refreshing state...
-
-Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
-
-Outputs:
-
-account_id = <yourawsaccountno>
-```
+<img src="https://gist.github.com/JamesWoolfenden/be86879e4e549c74e2278f10f044cd81/raw/956b0cb08c91157bbe2e0db571110c36212a9a1c/termtosvg_ej_gax9u.svg?sanitize=true">
 
 ### with the GCP Provider
 

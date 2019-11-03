@@ -48,6 +48,7 @@ nav:
   - Logging:
       - Cloudwatch [AWS]: aws-cloudwatch.md
       - Stackdriver [GCP]: gcp-stackdriver.md
+  - Terraform cloud: tfe.md
   - Help: help.md
   - About: about.md
 theme:

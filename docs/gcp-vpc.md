@@ -74,6 +74,7 @@ can't guarantee that exactly these actions will be performed if
 If your plan looks like above then you can proceed with terraform apply, by default this now repeats a plan first and then asks you if you want to proceed:
 
 ```Terraform
+
 ```
 
 Now you have a VPC, and not much else.
@@ -103,7 +104,7 @@ Eliminates the drift so there is only 1 tag.
 
 Now that we are done with the example we should tidy up and remove what's provisioned. This is straight forward enough, when your finished with this VPC run:
 
-``` terraform
+```terraform
 $ terraform destroy
 gcp out
 ```
@@ -114,7 +115,7 @@ Then enter yes
 gcpout
 ```
 
-Now were  back to the clean slate we started with.
+Now were back to the clean slate we started with.
 
 So to recap, we made a VPC, checked for drift, fixed the drift and then cleanuped our environment by destroying all our providisoned infrastructure.
 
@@ -139,7 +140,35 @@ The is the config file to support the pre-commit framework, it can help enforce 
 Also is a default Makefile for running Terraform
 
 ```Makefile
-<create a make file>
+#Makefile
+
+.PHONY: all
+
+all: init plan build
+
+init:
+	rm -rf .terraform/modules/
+	terraform init -reconfigure
+
+plan: init
+	terraform plan -refresh=true
+
+build: init
+	terraform apply -auto-approve
+
+check: init
+	terraform plan -detailed-exitcode
+
+destroy: init
+	terraform destroy -force
+
+docs:
+	terraform-docs md . > README.md
+
+valid:
+	tflint
+	terraform fmt -check=true -diff=true
+
 ```
 
 If you plan to turn this folder into a repo you need to install the config (at the root of the repo)
@@ -154,4 +183,4 @@ Link:
 
 Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
 
-Yes that wasn't very hard, creating a VPC in GCP is significantly easier than other the Cloud providers.
+Yes that wasn't very hard, creating a VPC in GCP is significantly easier than in other the Cloud providers.
