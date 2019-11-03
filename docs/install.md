@@ -83,39 +83,7 @@ provider "google" {
 
 Run Terraform init and then apply:
 
-```cli
-$terraform apply
-data.google_compute_regions.available: Refreshing state...
-
-Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
-
-Outputs:
-
-names = [
-  [
-    "asia-east1",
-    "asia-east2",
-    "asia-northeast1",
-    "asia-northeast2",
-    "asia-south1",
-    "asia-southeast1",
-    "australia-southeast1",
-    "europe-north1",
-    "europe-west1",
-    "europe-west2",
-    "europe-west3",
-    "europe-west4",
-    "europe-west6",
-    "northamerica-northeast1",
-    "southamerica-east1",
-    "us-central1",
-    "us-east1",
-    "us-east4",
-    "us-west1",
-    "us-west2",
-  ],
-]
-```
+<img src="https://gist.github.com/JamesWoolfenden/0fe27979ed83032b615cd692daeb92b0/raw/14da990b514fb6443f2156058ec9246084107431/termtosvg_phzb64eq.svg?sanitize=true">
 
 You now have your GCP auth set-up.
 

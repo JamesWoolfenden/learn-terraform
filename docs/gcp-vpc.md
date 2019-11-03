@@ -11,10 +11,10 @@ resource "google_compute_network" "vpc_network" {
 }
 ```
 
-Clone the terraform scaffold into **aws_vpc**.
+Clone the terraform scaffold into **gcp_vpc**.
 
 ```cli
-$ scaffold aws_vpc --provider GCP
+$ scaffold gcp_vpc --provider GCP
 ...
 ```
 
