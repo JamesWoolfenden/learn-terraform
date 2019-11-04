@@ -54,7 +54,7 @@ nav:
 theme:
   name: material
   favicon: "assets/images/favicon.ico"
-repo_name: "jamesWoolfenden/learn-packer-web"
+repo_name: "jamesWoolfenden/learn-terraform-web"
 repo_url: "https://github.com/jamesWoolfenden/learn-terraform-web"
 markdown_extensions:
   - admonition

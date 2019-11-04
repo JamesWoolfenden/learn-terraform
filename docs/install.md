@@ -87,6 +87,10 @@ Run Terraform init and then apply:
 
 You now have your GCP auth set-up.
 
+!!! note "Tip - Create a GCP project called **examplea**"
+    All the GCP examples are based around a project called examplea.
+    Instead of updating your providers, save yourself some time and create yourself a project called examplea.
+
 ## Terraform commands
 
 Terraform is a command line tool, to see its usage just Type Terraform at your console now.
@@ -163,15 +167,19 @@ terraform init --help
 
 if you open a .terraform folder you find
 
-modules/
-plugins/
+```shell
+$ ls -l
+total 0
+drwxrwxrwx 1 jim jim 512 Nov  4 23:00 modules
+drwxrwxrwx 1 jim jim 512 Nov  4 22:18 plugins
+```
 
 The modules folder hold a copy of the terraform modules that you are using.
 The plugins hold the downloaded copies of the executable providers.
 
 ### Plan
 
-What will happen on an Apply;
+What would happen on an Apply. The commnad is a hangover from older versions of Terraform, the apply command now includes a plan stage by default.
 
 ```cli
 $ terraform plan
@@ -223,7 +231,7 @@ can't guarantee that exactly these actions will be performed if
 
 ### Apply
 
-The doing. This can create and destroy, infrastructure will be modified to follow your definitions and compared to your state.
+The actual doing. This can create and destroy, infrastructure will be modified to follow your definitions and compared to your state.
 
 ```cli
 terraform apply
@@ -307,5 +315,5 @@ And usually in this order.
 
 ### Extras
 
-- WSL windows sub-sytem for linux
-- how to set up WSL
+- [WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
+- [How to set up WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)

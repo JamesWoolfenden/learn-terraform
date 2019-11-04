@@ -24,163 +24,34 @@ This is example only requires a name.
 Open your shell at **./gcp_vpc** and check the configuration with:
 
 ```cli
-$ terraform init
-Initializing the backend...
-
-Initializing provider plugins...
-
-Terraform has been successfully initialized!
-
+terraform init
+terraform apply
 ```
 
-and then
+<img src="https://gist.github.com/JamesWoolfenden/8ac6e29e9491c1d0b03e808fa364e4f9/raw/5d3d9518076ece924aad7bcf6b50cd276218b739/termtosvg_gweeuy5q.svg?sanitize=true">
 
-```cli
-$ terraform plan
-Refreshing Terraform state in-memory prior to plan...
-The refreshed state will be used to calculate this plan, but will not be
-persisted to local or remote state storage.
-
-
-------------------------------------------------------------------------
-
-An execution plan has been generated and is shown below.
-Resource actions are indicated with the following symbols:
-  + create
-
-Terraform will perform the following actions:
-
-  # google_compute_network.vpc_network will be created
-  + resource "google_compute_network" "vpc_network" {
-      + auto_create_subnetworks         = true
-      + delete_default_routes_on_create = false
-      + gateway_ipv4                    = (known after apply)
-      + id                              = (known after apply)
-      + name                            = "LovelyHorse"
-      + project                         = (known after apply)
-      + routing_mode                    = (known after apply)
-      + self_link                       = (known after apply)
-    }
-
-Plan: 1 to add, 0 to change, 0 to destroy.
-
-------------------------------------------------------------------------
-
-Note: You didn't specify an "-out" parameter to save this plan, so Terraform
-can't guarantee that exactly these actions will be performed if
-"terraform apply" is subsequently run.
-```
-
-If your plan looks like above then you can proceed with terraform apply, by default this now repeats a plan first and then asks you if you want to proceed:
-
-```Terraform
-
-```
+If your plan looks like above then you can proceed by approving.
 
 Now you have a VPC, and not much else.
 
-Open up the GCP console vpc page:
+Open up the GCP console [GCP VPC](https://console.cloud.google.com/networking/networks/list?)
 
-TODO:addlink
+![Network](gcp-vpc.png "VPC")
 
-TODO:modify
+Scroll down and you'll find your new VPC.
 
-Now rerun and verify the desired state.
+Select your new VPC and edit.
 
-```terraform
-$ terraform plan
-gcp out
-```
+## Clean up
 
-The plan tells us that there is 1 more tags on the infrastructure than in our TF "desired state".
-We have a choice, enforce the desired state or update the state.
+We can clean up by destroying created VPC:
 
 ```cli
-$ Terraform apply
-...
+terraform destroy
 ```
 
-Eliminates the drift so there is only 1 tag.
+<img src="https://gist.github.com/JamesWoolfenden/7278a4cca50a769cd564dd62d9cb820d/raw/8ea15acc350947a89e9e6c3bbf444118be8c3087/termtosvg_a17q1ibr.svg?sanitize=true">
 
-Now that we are done with the example we should tidy up and remove what's provisioned. This is straight forward enough, when your finished with this VPC run:
+Now everything that's been created has been removed.
 
-```terraform
-$ terraform destroy
-gcp out
-```
-
-Then enter yes
-
-```terraform
-gcpout
-```
-
-Now were back to the clean slate we started with.
-
-So to recap, we made a VPC, checked for drift, fixed the drift and then cleanuped our environment by destroying all our providisoned infrastructure.
-
-## Scaffold revisited
-
-Along with the structure for the template a couple of other files arrived. These are useful if you are going to turn the folder into a git repository.
-
-### .gitignore
-
-This contains a minimal gitignore with Terraform customisations.
-
-### .pre-commit-config.yaml
-
-The is the config file to support the pre-commit framework, it can help enforce good repository security and health. This config contains rules to protect your secrets.
-
-```json
-
-```
-
-### Makefile
-
-Also is a default Makefile for running Terraform
-
-```Makefile
-#Makefile
-
-.PHONY: all
-
-all: init plan build
-
-init:
-	rm -rf .terraform/modules/
-	terraform init -reconfigure
-
-plan: init
-	terraform plan -refresh=true
-
-build: init
-	terraform apply -auto-approve
-
-check: init
-	terraform plan -detailed-exitcode
-
-destroy: init
-	terraform destroy -force
-
-docs:
-	terraform-docs md . > README.md
-
-valid:
-	tflint
-	terraform fmt -check=true -diff=true
-
-```
-
-If you plan to turn this folder into a repo you need to install the config (at the root of the repo)
-with:
-
-```shell
-$ pre-commit install
-pre-commit installed at .\.git\hooks\pre-commit
-```
-
-Link:
-
-Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
-
-Yes that wasn't very hard, creating a VPC in GCP is significantly easier than in other the Cloud providers.
+Yes that wasn't very hard, creating a [Very simple] VPC in GCP is significantly easier than in other the Cloud providers.
