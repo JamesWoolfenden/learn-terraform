@@ -4,6 +4,7 @@ pip install mkdocs
 pip install pymdown-extensions
 pip install mkdocs-material
 pip install mkdocs-minify-plugin
+pip install mkdocs-add-teaser
 
 #Vscode
 https://marketplace.visualstudio.com/items?itemName=jebbs.markdown-extended
