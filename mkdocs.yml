@@ -77,10 +77,19 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+# plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - mkdocs-add-teaser:
+      teaser_class: "teaser"
 # Customization
 extra:
   manifest: "manifest.webmanifest"
   social:
+    - type: "github"
+      link: "https://github.com/slalom-consulting-ltd"
     - type: "twitter"
       link: "https://twitter.com/slalom"
     - type: "linkedin"
