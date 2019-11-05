@@ -66,5 +66,5 @@ terraform apply
 
 <img src="https://gist.github.com/JamesWoolfenden/9e4dcc56f9efb152f275a962b7081334/raw/afb25c8db8815f0166c5e0ef5d316285a851074c/termtosvg_gyl9_z48.svg?sanitize=true">
 
-!!! Note For more details on the module used:
-<https://registry.terraform.io/modules/JamesWoolfenden/codecommit/aws/0.2.53>
+!!! Note For more details on the module used
+    <https://registry.terraform.io/modules/JamesWoolfenden/codecommit/aws/0.2.53>
