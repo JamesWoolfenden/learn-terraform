@@ -40,7 +40,7 @@ nav:
   - Logging:
       - Cloudwatch [AWS]: aws-cloudwatch.md
   - Terraform cloud: tfe.md
-  - Styke Guide: style-guide.md
+  - Style Guide: style-guide.md
   - Help: help.md
   - About: about.md
 theme:
