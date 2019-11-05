@@ -20,7 +20,7 @@ terraform -v
 
 You'll need to update your path to pick up the exe on Windows.
 
-There's still no offical package manager support on linux <https://github.com/hashicorp/terraform/issues/17794>, so it's just the binaries.
+There's still no official package manager support on linux <https://github.com/hashicorp/terraform/issues/17794>, so it's just the binaries.
 
 Terraform is now installed, the next step is to try running it, to do any useful work this would be against and using a cloud provider, and that requires Authentication.
 

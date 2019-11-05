@@ -27,18 +27,18 @@ nav:
       - AWS: aws-iam.md
       - GCP: gcp-iam.md
   - DNS:
-      - Route 53 [AWS]: aws-dns.md
+      - Route 53: aws-dns.md
   - Advanced State: adv-state.md
   - Creating Modules: module.md
   - SourceCode:
-      - CodeCommit [AWS]: aws-codecommit.md
+      - CodeCommit: aws-codecommit.md
   - Containers:
       - AWS:
           - ECS: aws-ecs.md
       - GCP:
           - GKE: gcp-kubernetes.md
   - Logging:
-      - Cloudwatch [AWS]: aws-cloudwatch.md
+      - Cloudwatch: aws-cloudwatch.md
   - Terraform cloud: tfe.md
   - Style Guide: style-guide.md
   - Help: help.md
