@@ -49,3 +49,6 @@ resource "aws_cloudwatch_event_target" "target" {
   input_path = "$.detail.notificationBody"
 }
 ```
+
+!!!Note Links
+    https://github.com/JamesWoolfenden/terraform-aws-cloudwatch-s3

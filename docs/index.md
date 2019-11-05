@@ -51,4 +51,4 @@ Probably won't makes sense to even you six months later, god forbid you have use
 
 ### The Console
 
-Well thats not DevOps is it.
+Well that's not DevOps is it.

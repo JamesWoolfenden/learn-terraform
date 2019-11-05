@@ -314,7 +314,7 @@ And usually in this order.
     mkdir "$HOME/.terraform.d/plugin-cache"
     ```
 
-### Extras
-
-- [WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
-- [How to set up WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
+!!!Note Extras
+    [WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
+    
+    [How to set up WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)

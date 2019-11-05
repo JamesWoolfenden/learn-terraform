@@ -102,7 +102,7 @@ terraform {
 - prefix with account number
 - can always friendly name endpoint in DNS
 
-!!! Note Links
+!!!Note Links
     [AWS Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/aws/0.2.25)
     
     [GCP Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/gcp/0.2.12)
