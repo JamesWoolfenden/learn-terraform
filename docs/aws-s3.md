@@ -2,13 +2,13 @@
 
 One of the oldest components of AWS - S3 is easily provisionable.
 
-Starting with a new scaffold:
+Starting off with a new scaffold:
 
 ```cli
 $scaffold aws_bucket
 ```
 
-and add **aws_s3_bucket.Hyacinth.tf**
+and then add **aws_s3_bucket.Hyacinth.tf**
 
 ```terraform
 resource "aws_s3_bucket" "hyacinth" {
@@ -21,21 +21,21 @@ resource "aws_s3_bucket" "hyacinth" {
 
 And Apply.
 
-You can easily check its creation with the AWS cli.
+You can easily check its creation with the AWS cli, or the console if you must.
 
 ```cli
 $aws s3 ls hyacinth-bucket
 ```
 
-Nothing else will be seen as the bucket is empty.
+Nothing else will be seen as the bucket is currently empty.
 
 An S3 bucket comes with a large number of configuration possibilities, from hosting a website to data lake.
 
-But there is one type of S3 bucket that we always need on an AWS Terraform project, and thats is a State bucket.
+But there is one type of S3 bucket that we always need on an AWS Terraform project, and that's a State bucket.
 
 ## Making a State bucket
 
-Replace the contents of the S3 terraform file from the previous step, with:
+Replace the contents of the S3 Terraform file from the previous step, with:
 
 ```terraform
 resource "aws_s3_bucket" "statebucket" {
@@ -52,13 +52,16 @@ resource "aws_s3_bucket" "statebucket" {
 }
 ```
 
-and add the file **data.aws_caller_identity.current.tf**
+!!! Note Callouts
+    Notice that this is a private bucket and that it has versioning and delete protection.
+
+and add the file **data.aws_caller_identity.current.tf** to return the AWS account number.
 
 ```terraform
 data "aws_caller_identity" "current" {}
 ```
 
-and the file **aws_dynamodb_table.dynamodb-state-lock.tf**
+and the file **aws_dynamodb_table.dynamodb-state-lock.tf**, to help stop concurrent writes.
 
 ```terraform
 resource "aws_dynamodb_table" "dynamodb-state-lock" {
@@ -76,8 +79,10 @@ resource "aws_dynamodb_table" "dynamodb-state-lock" {
 }
 ```
 
-With that applied, you will have an S3 locking versioned Terraform State bucket, that you use for all your work.
-To fully implement upi also need to add a reference file to all of your templates call it **remote_state.tf**, by using your account number and region, the bucket be different it will be unique on a account basis.
+With that applied, you will have an S3 locking and versioned Terraform State bucket, that you use for all your work. In this account.
+Dont share state buckets across accounts. **DO NOT**
+
+To fully implement you also need to add a reference file to all of your templates call it **remote_state.tf**, by using your account number and region, this bucket be different, it will be unique on a account basis.
 The property "key" must be different on every template.
 
 ```terraform
@@ -97,10 +102,9 @@ terraform {
 - prefix with account number
 - can always friendly name endpoint in DNS
 
-### links
-
-[AWS Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/aws/0.2.25)
-
-[GCP Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/gcp/0.2.12)
-
-[Azure Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/azure/0.1.11)
+!!! Note Links
+    [AWS Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/aws/0.2.25)
+    
+    [GCP Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/gcp/0.2.12)
+    
+    [Azure Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/azure/0.1.11)
