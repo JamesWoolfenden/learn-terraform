@@ -287,9 +287,10 @@ $ terraform destroy
 
 ## Modifying existing infrastructure
 
-If the definition differs from the existing state captured. Some properties changing cause exsiting objects to be modified others the recreation.
+If the definition differs from the existing state captured. Some properties changing causes exsisting objects to be modified others the recreation.
 
 How can I tell what which will happen?
+
 TODO:show where changes/destroyed
 
 And usually in this order.

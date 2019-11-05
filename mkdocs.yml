@@ -8,15 +8,9 @@ nav:
   - Syntax: syntax.md
   - Making a VPC:
       - AWS: aws-vpc.md
-      - GCP:
-          - basic: gcp-vpc.md
-          - peering: gcp-vpc-peering.md
-          - multiple: gcp-vpc-multiple.md
+      - GCP: gcp-vpc.md
   - Creating a Subnet:
       - AWS: aws-subnet.md
-      - GCP: gcp-subnet.md
-  - Gateways:
-      - GCP: gcp-natgateway.md
   - Creating an Instance:
       - AWS: aws-instance.md
   - Autoscaling:
@@ -24,10 +18,6 @@ nav:
   - Load Balancing:
       - AWS:
           - Application: aws-alb.md
-      - GCP:
-          - main: gcp-loadbalancers.md
-          - http: gcp-http-ln.md
-          - internal: gcp-internalloadbalancer.md
   - Databases:
       - RDS: aws-rds.md
   - Storage:
@@ -41,14 +31,15 @@ nav:
   - Creating Modules: module.md
   - SourceCode:
       - CodeCommit [AWS]: aws-codecommit.md
-      - Cloud source [GCP]: gcp-source.md
   - Containers:
+      - AWS:
+          - ECS: aws-ecs.md
       - GCP:
           - GKE: gcp-kubernetes.md
   - Logging:
       - Cloudwatch [AWS]: aws-cloudwatch.md
-      - Stackdriver [GCP]: gcp-stackdriver.md
   - Terraform cloud: tfe.md
+  - Styke Guide: style-guide.md
   - Help: help.md
   - About: about.md
 theme:

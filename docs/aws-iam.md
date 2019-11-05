@@ -1,8 +1,8 @@
 # Managing IAM with Terraform
 
-## AWS IAM
+## AWS IAM - Identity Access Management
 
-TODO:insert blurb about IAM
+Json based roles, user and policies. This is the authentication scheme at the heart of AWS.
 
 ## Create a policy with HEREDOC
 

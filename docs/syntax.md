@@ -1,5 +1,7 @@
 # Terraform HCL syntax Primer
 
+Most of what you need to know ius found on the teTerraform site [https://www.terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html)
+
 ## Provisioners
 
 ## Resources
@@ -10,7 +12,13 @@
 - maps
 - lists
 
-### new in TF 0.12
+## new in TF 0.12
 
-TODO:Listof
-TODO:Sets
+### Listof
+
+### Sets
+
+### Dynamic
+
+
+TODO
