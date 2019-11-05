@@ -76,7 +76,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
 If your plan looks like above then you can process with terraform apply,
- by default this now repeats a plan first and then asks you if you want to proceed:
+by default this now repeats a plan first and then asks you if you want to proceed:
 
 ```Terraform
 An execution plan has been generated and is shown below.
@@ -191,7 +191,7 @@ Eliminates the drift so there is only 1 tag.
 
 Now that we are done with the example we should tidy up and remove what's provisioned. This is straight forward enough, when your finished with this VPC run:
 
-``` terraform
+```terraform
 $ terraform destroy
 aws_vpc.main: Refreshing state... (ID: vpc-0382578ed3cd51dcc)
 

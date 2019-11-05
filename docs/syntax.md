@@ -20,5 +20,4 @@ Most of what you need to know ius found on the teTerraform site [https://www.ter
 
 ### Dynamic
 
-
 TODO

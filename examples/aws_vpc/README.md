@@ -16,10 +16,10 @@ Edit your profile and add:
 function scaffold {
 param([string]$name)
 git clone --depth=1 git@github.com:JamesWoolfenden/tf-scaffold.git "$name"
-rm "$name\.git" -recurse -force
+rm "\$name\.git" -recurse -force
 }
 
-## *Nix
+## \*Nix
 
 ```cli
 git clone --depth=1 git@github.com:JamesWoolfenden/tf-scaffold.git scaffold| rm !$/.git -rf

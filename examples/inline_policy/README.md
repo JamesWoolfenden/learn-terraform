@@ -43,7 +43,7 @@ scaffold -name hello-world
 
 To make a new project anytime you like.
 
-## *Nix
+## \*Nix
 
 ```cli
 git clone --depth=1 git@github.com:JamesWoolfenden/tf-scaffold.git scaffold| rm !$/.git -rf

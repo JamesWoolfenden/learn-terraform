@@ -136,7 +136,7 @@ data "aws_iam_policy_document" "assume_role_policy" {
 When you use policies you might hear alot about 2 types of policies:
 
 - Unmanaged/inline policy
-Inline policies are child objects of a role or user, and dont count in your account limit. They are good for creating policies that are not for re-use. A policy with a single responsibility or use.
+  Inline policies are child objects of a role or user, and dont count in your account limit. They are good for creating policies that are not for re-use. A policy with a single responsibility or use.
 
 In Terraform you can use an aws_iam_role_policy resource to create an inline policy on a role:
 
@@ -154,7 +154,7 @@ resource "aws_iam_role_policy" "inline_policy" {
 You can still use a **data.aws_iam_policy_document**.
 
 - Managed Policy
-Managed policies have to be attached to users or groups, and go be attached to multiple IAM roles or users.
+  Managed policies have to be attached to users or groups, and go be attached to multiple IAM roles or users.
 
 ```terraform
 resource "aws_iam_policy" "pipeline" {

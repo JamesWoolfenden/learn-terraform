@@ -91,10 +91,11 @@ Also copy the pre-commit file and install it.
 Ok so you broke your state file? Or you have a tonne of existing estate?
 
 - Logging on S3 buckets
+
   - to find out who broke it.
 
 - Import existing infra basics
-Most (BUT NOT ALL) resources have support for the import keyword, this can create a lot of work. If your doing a load it will be better to look at Terraforming.
+  Most (BUT NOT ALL) resources have support for the import keyword, this can create a lot of work. If your doing a load it will be better to look at Terraforming.
 
 This gives you the terraform, this gives you the state:
 

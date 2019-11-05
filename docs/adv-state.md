@@ -2,7 +2,7 @@
 
 ## Moving to Terraform Remote State
 
-Up to now all the examples have created a local state file,  **terraform.tfstate**. If you are a lone developer operator then this could suffice, but if you lose that file or need to co-operate with other developers on changes a different approach is required.
+Up to now all the examples have created a local state file, **terraform.tfstate**. If you are a lone developer operator then this could suffice, but if you lose that file or need to co-operate with other developers on changes a different approach is required.
 
 ## Local State
 

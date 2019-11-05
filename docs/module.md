@@ -17,7 +17,7 @@ Principles for module creation:
 - enables overrides for defaults.
 - includes a readme with usage
 - conforms to the standard module structure layout
-<https://www.terraform.io/docs/modules/index.html>
+  <https://www.terraform.io/docs/modules/index.html>
 - versioning of modules.
 - contains examples.
 - defines inputs in variables.tf with descriptions.
@@ -66,7 +66,7 @@ Or have your own CI process for your modules.
 You need to tag and then push the tag to the upstream repository.
 
 !!! note "Git and tags"
-    You can also set your git config to always follow tags:
+You can also set your git config to always follow tags:
 
     ```cli
     git config --global push.followTags true
@@ -119,7 +119,6 @@ I use tf_scaffold to create new modules and this always adds a pre-commit file. 
 I have a build/intregration test that builds and destroys one of my modules examples before it tags the module. I am currently using Travis for building, testing and labelling my modules, other CI tools would also work <https://github.com/JamesWoolfenden/terraform-gcp-bastion/blob/master/.travis.yml>
 
 ```yaml
-
 dist: trusty
 sudo: required
 services:
@@ -138,18 +137,17 @@ addons:
       - curl
 
 before_script:
-- export TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
-- curl --silent --output terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
-- unzip terraform.zip ; rm -f terraform.zip; chmod +x terraform
-- mkdir -p ${HOME}/bin ; export PATH=${PATH}:${HOME}/bin; mv terraform ${HOME}/bin/
-- terraform -v
+  - export TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
+  - curl --silent --output terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
+  - unzip terraform.zip ; rm -f terraform.zip; chmod +x terraform
+  - mkdir -p ${HOME}/bin ; export PATH=${PATH}:${HOME}/bin; mv terraform ${HOME}/bin/
+  - terraform -v
 
 script:
-- terraform init -get-plugins -backend=false -input=false
-- terraform init -get -backend=false -input=false
-- terraform fmt
-- bash validate.sh
-
+  - terraform init -get-plugins -backend=false -input=false
+  - terraform init -get -backend=false -input=false
+  - terraform fmt
+  - bash validate.sh
 
 after_success:
   - git config --global user.email "builds@travis-ci.com"
@@ -161,7 +159,7 @@ after_success:
 
 ### Scaffold
 
-Add a function to your profile to add a function to your shell. That's $PROFILE on Windows or ~/.bashrc on Linix.
+Add a function to your profile to add a function to your shell. That's \$PROFILE on Windows or ~/.bashrc on Linix.
 
 ```powershell tab="powershell"
 function scaffold {
@@ -235,39 +233,39 @@ The **.pre-commit.config.yaml** in the root:
 
 ```yaml
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.1.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-yaml
-    -   id: check-added-large-files
-- repo: git://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.1.6
-  hooks:
-  - id: forbid-tabs
-    exclude_types: [python, javascript, dtd, markdown, makefile]
-    exclude: binary|\.bin$
-- repo: git://github.com/kintoandar/pre-commit.git
-  rev: v2.1.0
-  hooks:
-  - id: terraform_fmt
-- repo: https://github.com/pre-commit/pre-commit-hooks.git
-  rev: v2.1.0
-  stages:
-  - commit
-  - push
-  hooks:
-  -   id: detect-aws-credentials
-  -   id: detect-private-key
-- repo: https://github.com/detailyang/pre-commit-shell
-  rev: 1.0.4
-  hooks:
-  - id: shell-lint
-- repo: git://github.com/igorshubovych/markdownlint-cli
-  rev: v0.14.0
-  hooks:
-  - id: markdownlint
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: git://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.6
+    hooks:
+      - id: forbid-tabs
+        exclude_types: [python, javascript, dtd, markdown, makefile]
+        exclude: binary|\.bin$
+  - repo: git://github.com/kintoandar/pre-commit.git
+    rev: v2.1.0
+    hooks:
+      - id: terraform_fmt
+  - repo: https://github.com/pre-commit/pre-commit-hooks.git
+    rev: v2.1.0
+    stages:
+      - commit
+      - push
+    hooks:
+      - id: detect-aws-credentials
+      - id: detect-private-key
+  - repo: https://github.com/detailyang/pre-commit-shell
+    rev: 1.0.4
+    hooks:
+      - id: shell-lint
+  - repo: git://github.com/igorshubovych/markdownlint-cli
+    rev: v0.14.0
+    hooks:
+      - id: markdownlint
 ```
 
 In the root of **terraform-aws-s3**:

@@ -25,6 +25,6 @@ add route53 to alb example
 basic DNS
 
 other features of Route53
-    cross region load balancing
+cross region load balancing
 
 ## GCP DNS

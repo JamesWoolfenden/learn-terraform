@@ -83,11 +83,11 @@ That's quite and lot different and dropped a whole heap of new stuff, so time fo
 count             = length(data.aws_availability_zones.available.names)
 ```
 
-This makes as many of the object aws_subnet.public as  length(data.aws_availability_zones.available.names) evaluates to. That'll depends on how many Availabilty Zones are in your region, but it'll probably be 3.
+This makes as many of the object aws_subnet.public as length(data.aws_availability_zones.available.names) evaluates to. That'll depends on how many Availabilty Zones are in your region, but it'll probably be 3.
 
 ## Locals
 
-What is a local?  You can't currently set the value of a variable as something dynamic or for that matter one that's calculated, but you can achieve the same thing with a local, as you can see above in **locals.tf**.
+What is a local? You can't currently set the value of a variable as something dynamic or for that matter one that's calculated, but you can achieve the same thing with a local, as you can see above in **locals.tf**.
 
 This makes an array of cidrblocks based on var.cidr using a built in function cidrsubnet.
 This array then gets used with the indexer to give the CIDR ranges for each subnet.
@@ -139,7 +139,7 @@ resource "aws_route" "public" {
 }
 ```
 
-That's a complete set of public subnets.  The next step would be to make a set of private subnets. But...
+That's a complete set of public subnets. The next step would be to make a set of private subnets. But...
 
 Not only can you get Design patterns to create your base networking, but you can get the Terraform as well, written by the Platform itself, so as setting up the basic VPC structure in AWS is a solved problem, you can use one of a number of tried and tested designs from the registry:
 
