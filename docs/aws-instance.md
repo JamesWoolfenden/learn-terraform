@@ -140,7 +140,7 @@ This needs a provider for file **provider.local.tf**:
 
 ```terraform
 provider local {
-
+  version="1.4"
 }
 ```
 
