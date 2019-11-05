@@ -240,16 +240,92 @@ This contains a minimal gitignore with Terraform customisations.
 
 The is the config file to support the pre-commit framework, it can help enforce good repository security and health. This config contains rules to protect your secrets.
 
-```json
+This is this repos pre-commit configuration.
 
+```json
+---
+# yamllint disable rule:indentation
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+  - repo: git://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.7
+    hooks:
+      - id: forbid-tabs
+        exclude_types: [python, javascript, dtd, markdown, makefile]
+        exclude: binary|\.bin$
+  - repo: git://github.com/kintoandar/pre-commit.git
+    rev: v2.1.0
+    hooks:
+      - id: terraform_fmt
+  - repo: https://github.com/pre-commit/pre-commit-hooks.git
+    rev: v2.4.0
+    stages:
+      - commit
+      - push
+    hooks:
+      - id: detect-aws-credentials
+      - id: detect-private-key
+  - repo: https://github.com/detailyang/pre-commit-shell
+    rev: 1.0.5
+    hooks:
+      - id: shell-lint
+  - repo: git://github.com/igorshubovych/markdownlint-cli
+    rev: v0.19.0
+    hooks:
+      - id: markdownlint
+  - repo: git://github.com/adrienverge/yamllint
+    rev: v1.18.0
+    hooks:
+      - id: yamllint
+        name: yamllint
+        description: This hook runs yamllint.
+        entry: yamllint
+        language: python
+        types: [file, yaml]
+  - repo: https://github.com/prettier/prettier
+    rev: 1.18.2
+    hooks:
+      - id: prettier
 ```
 
 ### Makefile
 
-Also is a default Makefile for running Terraform
+There is also is a default Makefile for running Terraform
 
 ```Makefile
-<create a make file>
+#Makefile
+
+.PHONY: all
+
+all: init plan build
+
+init:
+	rm -rf .terraform/modules/
+	terraform init -reconfigure
+
+plan: init
+	terraform plan -refresh=true
+
+build: init
+	terraform apply -auto-approve
+
+check: init
+	terraform plan -detailed-exitcode
+
+destroy: init
+	terraform destroy -force
+
+docs:
+	terraform-docs md . > README.md
+
+valid:
+	tflint
+	terraform fmt -check=true -diff=true
 ```
 
 If you plan to turn this folder into a repo you need to install the config (at the root of the repo)
