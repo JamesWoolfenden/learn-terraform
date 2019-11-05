@@ -1,9 +1,19 @@
 # Terraform Cloud
 
-## setup
+TODO
 
-## mamanged state
+## Setup
+
+TODO
+
+## Mananged state
+
+TODO
 
 ## costing
 
+TODO
+
 ## sentinel
+
+TODO

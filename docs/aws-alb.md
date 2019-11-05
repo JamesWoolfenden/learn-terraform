@@ -26,4 +26,6 @@ resource "aws_lb" "apploadbalancer" {
 
 Extras:
 
-Set-up a listener
+TODO:Set-up a listener
+TODO:addinstances
+

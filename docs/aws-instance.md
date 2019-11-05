@@ -217,8 +217,8 @@ total 32
 -rwxrwxrwx 1 jim jim   120 Oct 22 10:13 variables.tf
 ```
 
-!!! Warning 
+!!! Warning
     Do not add keys to Git
 
-!!! Info 
+!!! Info
     Run "Terraform destroy" to cleanup.
