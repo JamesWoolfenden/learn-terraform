@@ -42,6 +42,23 @@ A simple one looks like this:
 
 The state file holds a record of inputs, outputs and resources created. A state file is a record of what infrastructure was made or that existed at the last run.
 
+A Typical setup is to create an S3 bucket and configure that to store state, this is called a remote backend.
+With-in that bucket multiple state files from many different project would exist from One AWS/GCP account/project. Each projects' remote backend would look similar to **remote_state.tf** below:
+
+```terraform
+terraform {
+  backend "s3" {
+    encrypt        = true
+    bucket         = "121334234343-terraform-state"
+    key            = "aws-lambda-wilbur/lambda/terraform.tfstate"
+    dynamodb_table = "dynamodb-state-lock"
+    region         = "eu-west-1"
+  }
+}
+```
+
+Where we have an s3 bucket *s3://121334234343-terraform-state* with a folder aws-lambda-wilbur/lambda/ as this is a environment called **lambda** for the template **aws-lambda-wilbur**.
+
 ### Importance of setting version
 
 The state file is written with the version number - see the line above
