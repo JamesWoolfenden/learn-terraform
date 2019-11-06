@@ -85,6 +85,7 @@ Run Terraform init and then apply:
 
 <img src="https://gist.github.com/JamesWoolfenden/0fe27979ed83032b615cd692daeb92b0/raw/14da990b514fb6443f2156058ec9246084107431/termtosvg_phzb64eq.svg?sanitize=true">
 
+
 You now have your GCP auth set-up.
 
 !!! note "Tip - Create a GCP project called **examplea**"

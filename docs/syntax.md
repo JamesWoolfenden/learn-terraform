@@ -1,20 +1,26 @@
 # Terraform HCL syntax Primer
 
-Most of what you need to know ius found on the teTerraform site [https://www.terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html)
+Most of what you need to know is found on the Terraform site [https://www.terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html)
 
 ## Provisioners
 
 As the Terraform Docs call out **"Provisioners are a Last Resort"**.
-Heed these words, there really should be a better way of doing what your trying to do.
+Heed these words, there is, and there really should be a better way of doing what your trying to do.
 
-Provisoners dont do state, so you have less control over when they run and what they do.
+Provisoners dont do state and are a horror to make idempotent, so you have less control over when they run and what they do.
 You can use Triggers to control execution. Creating destroy time provisioners is a good way of wasting a lot of your time.
+If you find yourself wanting to install packages with at launch with **remote-exec**:
+
+- Is this better something better pre-prepared in Packer - **Almost definitely**
+- If Packer is overkill then could this be done with your bootstrap load -**maybe, see previoud answer**.
+- Installing at Launch is slow, if you spinning up because of a scaling request, you have no time to spare.  
+The Bootstrap load should be the chance to add environment specifc configuration at launchtime.
 
 ### Connections
 
-Remote Provisoners need authentication, probably via SSH. So you now have an SSH key management issue. You also need to be on a network that allows it. You may have to connect through a bastion host.
+Remote Provisoners need authentication, probably via SSH{god forbid it winrm}. So you now have an SSH key management issue. You also need to be on a network that allows it. You may have to connect through a bastion host.
 
-### COnnection forwarding
+### Connection forwarding
 
 TODO:Thru a Bastion
 
@@ -25,7 +31,7 @@ When to use a Provisioner
 
 When not
 
-- Installing on a new instance
+- Installing anything on a new instance
   Terraform is for making infrastructure and for managing "Cattle". If you find your self wanting to install a lot of components you should be making new components via tools like Packer.
 
 ### Remote-Exec
@@ -55,7 +61,7 @@ on_failure = "continue"
 
 !!!Note Other Provisioners
 I have never used these provisioners, if you have some legacy scripts you want to exploit they may have be useful.
-Chef provisioner
+    Chef provisioner
 
     Puppet provisioner
 
