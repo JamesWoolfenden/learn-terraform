@@ -9,39 +9,128 @@ Up to now all the examples have created a local state file, **terraform.tfstate*
 Have a look at the Terraform code you applied in the previous chapters, along with the files you wrote, you will see a file called **terraform.tfstate**.
 
 Open it your editor, being careful not to change a thing.
-TODO:typical content picture>
 
-Re-apply the Terraform(This just to check that all is working currently)
+```terrafrom
+{
+  "version": 4,
+  "terraform_version": "0.12.10",
+  "serial": 2,
+  "lineage": "a20fb43f-c6e8-d766-37d1-dd9af05f7a7e",
+  "outputs": {
+    "availablity_zones": {
+      "value": [
+        "eu-west-1a",
+        "eu-west-1b",
+        "eu-west-1c"
+      ],
+      "type": [
+        "list",
+        "string"
+      ]
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "aws_availability_zones",
+      "name": "available",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "blacklisted_names": null,
+            "blacklisted_zone_ids": null,
+            "id": "2019-11-06 14:17:11.2174491 +0000 UTC",
+            "names": [
+              "eu-west-1a",
+              "eu-west-1b",
+              "eu-west-1c"
+            ],
+            "state": "available",
+            "zone_ids": [
+              "euw1-az3",
+              "euw1-az1",
+              "euw1-az2"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_caller_identity",
+      "name": "current",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "account_id": "111111111111",
+            "arn": "arn:aws:iam::111111111111:user/jameswoolfenden",
+            "id": "2019-11-06 14:17:11.5923975 +0000 UTC",
+            "user_id": "AAAAAAAAAAAAAAAAA"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+Re-apply the Terraform(This just to check that all is still working)
 
 ```shell
 $ Terraform apply
 ...
 ```
 
-TODO:some output
-
 After the apply is finished, rename the file **terraform.tfstate** to **terraform.tfstate.old**.
 
-Now try to re-apply the same Terraform.
-
-TODO:show some error
-
-That failed. Lots of issues about resource existing?
+Now try to re-apply the same Terraform. If the sample you used created infrastructure you'll now see an error showing that it failed. Lots of issues about resource existing?
 
 That's easily fixed by reverting your re-naming.
 
-So losing your terraform.tfstate file isn't great. That file is also best not left on your machine or on any server, plus it might have information you don't want shared.
+So losing your **terraform.tfstate** file isn't great. That file is also best not left on your machine or on any server, plus it might have information you don't want shared.
 If you ever want to automate or cooperate on infrastructure you must have a better solution.
 
 The easiest way to solve this, in the cloud, is the use of a "State bucket". A State bucket might make you think of AWS but the same principal applies to Azure and GCP.
 
 ### AWS State Bucket
 
-TODO:making a state bucket
+For each AWS account you use Terraform with create a remote backend to store Terraform state.
+Create folder and add **module.statebucket.tf**.
 
-### remote-state.tf
+```terraform
+module statebucket {
+  source      = "JamesWoolfenden/statebucket/aws"
+  version     = "0.2.25"
+  common_tags = var.common_tags
+}```
 
-This is
+and a **provider.aws.tf**
+
+```terraform
+provider "aws" {
+  region  = "eu-west-1"
+  version = "2.31"
+}
+
+Run this once and it will create your state bucket named "${data.aws_caller_identity.current.account_id}-terraform-state".
+
+Run it a second time and the state for creating the buckets is stored in the bucket by writing its own **remote.state.tf**
+
+```terraform
+terraform {
+  backend "s3" {
+    encrypt        = true
+    bucket         = "1232141412-terraform-state"
+    key            = "state-bucket/terraform.tfstate"
+    dynamodb_table = "dynamodb-state-lock"
+    region         = "eu-west-1"
+  }
+}
+```
 
 ## locking and unlock state buckets
 
@@ -78,7 +167,14 @@ flag, but this is not recommended.
 
 ## Versioning on the AWS bucket
 
-TODO: versioning on an s3 bucket
+Versioning on the S3 bucket is enable by the properties in **aws_s3_bucket.statebucket.tf**
+
+```terraform
+  versioning {
+    enabled    = true
+    mfa_delete = true
+  }
+```
 
 ## GCP and Azure
 
