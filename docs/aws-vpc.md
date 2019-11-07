@@ -246,7 +246,7 @@ This is this repos pre-commit configuration.
 ---
 # yamllint disable rule:indentation
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: git://github.com/pre-commit/pre-commit-hooks
     rev: v2.4.0
     hooks:
       - id: trailing-whitespace
@@ -262,7 +262,7 @@ repos:
     rev: v2.1.0
     hooks:
       - id: terraform_fmt
-  - repo: https://github.com/pre-commit/pre-commit-hooks.git
+  - repo: git://github.com/pre-commit/pre-commit-hooks
     rev: v2.4.0
     stages:
       - commit
@@ -287,7 +287,7 @@ repos:
         entry: yamllint
         language: python
         types: [file, yaml]
-  - repo: https://github.com/prettier/prettier
+  - repo: git://github.com/prettier/prettier
     rev: 1.18.2
     hooks:
       - id: prettier
@@ -337,8 +337,8 @@ pre-commit installed at .\.git\hooks\pre-commit
 ```
 
 !!! Note Links
-    Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
+Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
 
     Help documents for Terraform AWS Virtual Private Cloud (VPC) object are here <https://www.terraform.io/docs/providers/aws/r/vpc.html>
-    
+
     VPC designs <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html>
