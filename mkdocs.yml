@@ -34,6 +34,7 @@ nav:
       - CodeCommit: aws-codecommit.md
   - Containers:
       - AWS:
+          - ECR: aws-ecr.md
           - ECS: aws-ecs.md
       - GCP:
           - GKE: gcp-kubernetes.md
