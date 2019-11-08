@@ -79,7 +79,43 @@ I have never used these provisioners, if you have some legacy scripts you want t
 
 ## new in TF 0.12
 
-### Listof
+## Listof
+
+### Objects
+
+You can define lists of a type or multiple types.
+
+```terraform 
+variable "database" {
+    type=list(object({
+        name = string
+    }))
+    default=[]
+}
+```
+
+Setting the database variable:
+
+```HCL
+database=[{
+        name= "my-database"
+    },
+    {
+        name= "your-database"
+    }]
+```
+
+When used with **google_sql_database.database.tf** it will create 2 databases.
+
+```terraform
+resource "google_sql_database" "database" {
+  count    = length(var.database)
+  name     = var.database[count.index]["name"]
+  instance = google_sql_database_instance.instance.name
+}
+```
+
+This syntax enables optional creation of resources based on that object being populated, or not.
 
 ### Sets
 
