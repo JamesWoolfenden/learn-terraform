@@ -54,4 +54,10 @@ terraform destroy
 
 Now everything that's been created has been removed.
 
-Yes that wasn't very hard, creating a [Very simple] VPC in GCP is significantly easier than in other the Cloud providers.
+### Complex example
+
+TODO
+
+### Shared VPC
+
+toDo

@@ -10,10 +10,10 @@ TODO
 
 TODO
 
-## costing
+## Costing
 
 TODO
 
-## sentinel
+## Sentinel
 
-TODO
+TOD

@@ -12,8 +12,8 @@ You can use Triggers to control execution. Creating destroy time provisioners is
 If you find yourself wanting to install packages with at launch with **remote-exec**:
 
 - Is this better something better pre-prepared in Packer - **Almost definitely**
-- If Packer is overkill then could this be done with your bootstrap load -**maybe, see previoud answer**.
-- Installing at Launch is slow, if you spinning up because of a scaling request, you have no time to spare.  
+- If Packer is overkill then could this be done with your bootstrap load -**maybe, see previous answer**.
+- Installing at Launch is slow, if you spinning up because of a scaling request, you have no time to spare.
 The Bootstrap load should be the chance to add environment specifc configuration at launchtime.
 
 ### Connections
@@ -60,7 +60,7 @@ TODO
 on_failure = "continue"
 
 !!!Note Other Provisioners
-I have never used these provisioners, if you have some legacy scripts you want to exploit they may have be useful.
+    I have never used these provisioners, if you have some legacy scripts you want to exploit they may have be useful.
     Chef provisioner
 
     Puppet provisioner
@@ -71,11 +71,65 @@ I have never used these provisioners, if you have some legacy scripts you want t
 
 ## Resources
 
+This is the main component class in Terraform, resource are the infrastructure objects you're trying to create.
+
+### Providers
+
+Multiple use
+todo
+
+Passing to Modules
+todo
+
+### Functions
+
+Are well covered here [https://www.terraform.io/docs/configuration/functions.html](https://www.terraform.io/docs/configuration/functions.html)
+
 ### Variables
 
 - strings
 - maps
 - lists
+
+- null
+passing
+blocks
+lists
+
+- locals
+Terraform doesn't support interpolation of variables in variables.
+
+So although it would be **AWESOME** if this worked:
+
+```terraform
+variable "name" {
+  default="James"
+}
+
+variable "fullname" {
+  default="${var.name} Woolfenden"
+}
+```
+
+It however does not. Coff.
+
+However something similar can be achieved with **locals**:
+
+```terraform
+variable "name" {
+  default="James"
+}
+
+locals {
+  fullname="${var.name} Woolfenden"
+}
+```
+
+To reference the local you use:
+
+*local.fullname* instead of *var.fullname*
+
+See the Terraform docs [here](https://www.terraform.io/docs/configuration/locals.html)
 
 ## new in TF 0.12
 
@@ -85,12 +139,12 @@ I have never used these provisioners, if you have some legacy scripts you want t
 
 You can define lists of a type or multiple types.
 
-```terraform 
+```terraform
 variable "database" {
-    type=list(object({
-        name = string
-    }))
-    default=[]
+  type=list(object({
+    name = string
+  }))
+  default=[]
 }
 ```
 
@@ -126,25 +180,32 @@ todo
 The Dynamic keyword can be used to variable length blocks as used in this [codepipeline](https://github.com/JamesWoolfenden/terraform-aws-codepipeline/blob/master/aws_pipeline.pipe.tf) module.
 
 ```terraform
-  dynamic "stage" {
-    for_each = [for s in var.stages : {
-      name   = s.name
-      action = s.action
-    }]
+dynamic "stage" {
+  for_each = [for s in var.stages : {
+    name   = s.name
+    action = s.action
+  }]
 
-    content {
-      name = stage.value.name
-      action {
-        name             = stage.value.action["name"]
-        owner            = stage.value.action["owner"]
-        version          = stage.value.action["version"]
-        category         = stage.value.action["category"]
-        provider         = stage.value.action["provider"]
-        input_artifacts  = stage.value.action["input_artifacts"]
-        output_artifacts = stage.value.action["output_artifacts"]
-        configuration    = stage.value.action["configuration"]
-      }
+  content {
+    name = stage.value.name
+    action {
+      name             = stage.value.action["name"]
+      owner            = stage.value.action["owner"]
+      version          = stage.value.action["version"]
+      category         = stage.value.action["category"]
+      provider         = stage.value.action["provider"]
+      input_artifacts  = stage.value.action["input_artifacts"]
+      output_artifacts = stage.value.action["output_artifacts"]
+      configuration    = stage.value.action["configuration"]
     }
   }
+}
 ```
 
+## Order
+
+One of the awesome things that Terraform normally just does correctly, nearly always. Sometimes it doesn't and usually thats poor design on out part, but sometimes not.
+
+### depends_on
+
+### depends_on with modules
