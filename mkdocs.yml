@@ -24,6 +24,7 @@ nav:
       - CloudSQL: gcp-cloudsql.md
   - Storage:
       - S3: aws-s3.md
+      - Cloud Storage: gcp-cloudstorage.md
   - IAM:
       - AWS: aws-iam.md
       - GCP: gcp-iam.md
