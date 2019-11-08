@@ -27,7 +27,7 @@ nav:
       - Cloud Storage: gcp-cloudstorage.md
   - IAM:
       - AWS: aws-iam.md
-      - GCP: gcp-iam.md
+#      - GCP: gcp-iam.md
   - DNS:
       - Route 53: aws-dns.md
   - Advanced State: adv-state.md
@@ -42,7 +42,7 @@ nav:
           - GKE: gcp-kubernetes.md
   - Logging:
       - Cloudwatch: aws-cloudwatch.md
-  - Terraform cloud: tfe.md
+#  - Terraform cloud: tfe.md
   - Style Guide: style-guide.md
   - Help: help.md
   - About: about.md

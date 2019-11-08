@@ -13,7 +13,7 @@ Storage Admin
 Cloud SQL Admin
 ```
 
-To your Terraform user. 
+To your Terraform user.
 
 ## Private Instance
 
@@ -21,6 +21,7 @@ Create a database instance, x databases with x number of users. This instance is
 
 Add **module.cloudsql.tf** to your code [see other objects](https://github.com/JamesWoolfenden/terraform-gcp-cloudsql/tree/master/example/examplea):-
 
+```terraform
 module cloudsql {
   source       = "JamesWoolfenden/cloudsql/gcp"
   version      = "0.1.13"
@@ -30,6 +31,7 @@ module cloudsql {
   database     = var.database
   users        = var.users
 }
+```
 
 This creates any number of databases through the the variable "database":
 
@@ -54,4 +56,3 @@ Setting database to
 
 Will create 2 databases.
 The "Users" variable and resource follows the same pattern.
-

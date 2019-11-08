@@ -1,24 +1,27 @@
 # Terraform HCL syntax Primer
 
-Most of what you need to know is found on the Terraform site [https://www.terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html)
+Most of what you need to know is found on the Terraform site [https://www.terraform.io/docs/configuration/variables.html](https://www.terraform.io/docs/configuration/variables.html). The information provided here is in addition.
 
 ## Provisioners
 
 As the Terraform Docs call out **"Provisioners are a Last Resort"**.
 Heed these words, there is, and there really should be a better way of doing what your trying to do.
 
-Provisoners dont do state and are a horror to make idempotent, so you have less control over when they run and what they do.
-You can use Triggers to control execution. Creating destroy time provisioners is a good way of wasting a lot of your time.
-If you find yourself wanting to install packages with at launch with **remote-exec**:
+Provisoners don't do state and are a horror to make idempotent, so you have less control over when they run and what they do.
+You can use Triggers to control execution, but creating destroy time provisioners is a good way of wasting a lot of your time.
 
-- Is this better something better pre-prepared in Packer - **Almost definitely**
+If you find yourself wanting to install packages at launch with **remote-exec** ask yourself:
+
+- Is this something better pre-prepared in Packer - **Almost definitely**
 - If Packer is overkill then could this be done with your bootstrap load -**maybe, see previous answer**.
-- Installing at Launch is slow, if you spinning up because of a scaling request, you have no time to spare.
-The Bootstrap load should be the chance to add environment specifc configuration at launchtime.
+  The Bootstrap load should be the chance to add environment specifc configuration at launchtime.
+- Remember that Installing at launch is slow and could fail, so if you're spinning up because of a scaling request, you have no time to spare, and have zero room for failure.
+- Remember pre-prepared always beats installing.
+- With In-place updates there's always a risk of failed update and loss of use while changing, Downtime is to be avoided.
 
 ### Connections
 
-Remote Provisoners need authentication, probably via SSH{god forbid it winrm}. So you now have an SSH key management issue. You also need to be on a network that allows it. You may have to connect through a bastion host.
+Remote Provisoners need authentication, probably via SSH [God forbid it **winrm**]. So you now have SSH key, password or certificate  management issues. You also need to be on a network that allows it. You may have to connect through a bastion host.
 
 ### Connection forwarding
 
