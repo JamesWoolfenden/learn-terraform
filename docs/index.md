@@ -2,8 +2,8 @@
 
 ## What is Terraform
 
-Terraform is a language and tool for creating infrastructure via a technique call Infrastrucuture as Code.
-This is an example of and AWS instance, know as a resource, "web" described in Terraform with 4 properies set:
+Terraform is a language and tool for creating infrastructure via a technique called Infrastrucuture as Code.
+This is an example of an AWS instance, know as a resource, called "web" described in Terraform with 4 properies set:
 
 ```terraform
 resource "aws_instance" "web" {
@@ -12,8 +12,9 @@ resource "aws_instance" "web" {
   tags          = var.common_tags
   key_name      = aws_key_pair.ssh.key_name
 }
-
 ```
+
+When Terraform is run it will check and create if not existing already. If different it will fix the drift in the object to look like the specifiation.
 
 The Terraform tool is written in Go-lang, and available for many platforms as a single executable binary, you can find the source is hosted on Github here:
 [Terraform](https://github.com/hashicorp/terraform), it is being actively developed and there are very regular updates to its core [changelog](https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md)

@@ -276,6 +276,16 @@ Do you want to perform these actions?
 
 ```
 
+### Targeted Apply
+
+With a Targeted Apply you can cherry pick the apply, this is especially useful when were developing or debugging:
+
+```bash
+terraform apply --target aws_vpc.main
+```
+
+This command will only make the VPC, and any of its dependant objects.
+
 ### Destroy
 
 What does it destroy, the definition or the state reference?
@@ -284,6 +294,14 @@ What does it destroy, the definition or the state reference?
 $ terraform destroy
 ...
 ```
+
+### Taint
+
+To force the recreation of an object you can taint it, to force it to be changed even if there's no drift.
+
+```bash
+terraform taint aws_instance.web
+````
 
 ## Modifying existing infrastructure
 
