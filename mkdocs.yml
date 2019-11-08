@@ -21,6 +21,7 @@ nav:
           - Application: aws-alb.md
   - Databases:
       - RDS: aws-rds.md
+      - CloudSQL: gcp-cloudsql.md
   - Storage:
       - S3: aws-s3.md
   - IAM:

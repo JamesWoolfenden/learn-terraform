@@ -119,6 +119,32 @@ This syntax enables optional creation of resources based on that object being po
 
 ### Sets
 
+todo
+
 ### Dynamic
 
-TODO
+The Dynamic keyword can be used to variable length blocks as used in this [codepipeline](https://github.com/JamesWoolfenden/terraform-aws-codepipeline/blob/master/aws_pipeline.pipe.tf) module.
+
+```terraform
+  dynamic "stage" {
+    for_each = [for s in var.stages : {
+      name   = s.name
+      action = s.action
+    }]
+
+    content {
+      name = stage.value.name
+      action {
+        name             = stage.value.action["name"]
+        owner            = stage.value.action["owner"]
+        version          = stage.value.action["version"]
+        category         = stage.value.action["category"]
+        provider         = stage.value.action["provider"]
+        input_artifacts  = stage.value.action["input_artifacts"]
+        output_artifacts = stage.value.action["output_artifacts"]
+        configuration    = stage.value.action["configuration"]
+      }
+    }
+  }
+```
+
