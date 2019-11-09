@@ -3,10 +3,16 @@
 ## Data source
 
 Gets the contents of a file.
+```
+data "local_file" "public_key" {
+    filename = "${path.module}/id_rsa.pub"
+}
+```
+You now have the content of the file in **data.local_file.public_key.content**
 
 ## Resource
 
-### Makes files
+### For Making files
 
 - To write templated files to disk
 ```terraform
@@ -34,4 +40,4 @@ resource "local_file" "private" {
 }
 ```
 
-This will write out private and public keys for a ssh key that your generated.
+This will write out private and public keys for a SSH key that are generated.
