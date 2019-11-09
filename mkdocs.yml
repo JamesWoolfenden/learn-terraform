@@ -8,21 +8,21 @@ nav:
   - State: state.md
   - Syntax: syntax.md
   - Providers:
-    - Utilities:
-      - Local file: local_file.md
-      - Template: template.md
-      - Random: random.md
-      - Terraform: terraform.md
-      - TLS: tls.md
-      - DNS: dns.md
-      - Null: null.md
-    - Status Cake: statuscake.md
-    - Pager Duty: pagerduty.md
-    - Docker: docker.md
-    - Github: github.md
-    - Gitlab: gitlab.md
-    - Consul: consul.md
-    - Vault: vault.md
+      - Utilities:
+          - Local file: local_file.md
+          - Template: template.md
+          - Random: random.md
+          - Terraform: terraform.md
+          - TLS: tls.md
+          - DNS: dns.md
+          - Null: null.md
+      - Status Cake: statuscake.md
+      - Pager Duty: pagerduty.md
+      - Docker: docker.md
+      - Github: github.md
+      - Gitlab: gitlab.md
+      - Consul: consul.md
+      - Vault: vault.md
   - Making a VPC:
       - AWS: aws-vpc.md
       - GCP: gcp-vpc.md

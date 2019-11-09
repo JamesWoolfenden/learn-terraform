@@ -53,7 +53,7 @@ resource "aws_s3_bucket" "statebucket" {
 ```
 
 !!! Note Callouts
-    Notice that this is a private bucket and that it has versioning and delete protection.
+Notice that this is a private bucket and that it has versioning and delete protection.
 
 and add the file **data.aws_caller_identity.current.tf** to return the AWS account number.
 
@@ -103,8 +103,8 @@ terraform {
 - can always friendly name endpoint in DNS
 
 !!!Note Links
-    [AWS Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/aws/0.2.25)
-    
+[AWS Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/aws/0.2.25)
+
     [GCP Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/gcp/0.2.12)
-    
+
     [Azure Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/azure/0.1.11)

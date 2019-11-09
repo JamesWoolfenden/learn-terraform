@@ -1,7 +1,7 @@
 # Template
 
 Used to tranform template files with a selection of variables. In this case a templated IAM policy **key_policy.json.tpl**
-Templates replacements in this format- ${account_id}.
+Templates replacements in this format- \${account_id}.
 
 ```json
 {
@@ -20,9 +20,7 @@ Templates replacements in this format- ${account_id}.
       "Sid": "Allow access for Key Administrators",
       "Effect": "Allow",
       "Principal": {
-        "AWS": [
-          "${key_admin_arn}"
-        ]
+        "AWS": ["${key_admin_arn}"]
       },
       "Action": [
         "kms:Create*",
@@ -44,9 +42,7 @@ Templates replacements in this format- ${account_id}.
       "Sid": "Allow use of the key",
       "Effect": "Allow",
       "Principal": {
-        "AWS": [
-          "${key_admin_arn}"
-        ]
+        "AWS": ["${key_admin_arn}"]
       },
       "Action": [
         "kms:Encrypt",
@@ -61,15 +57,9 @@ Templates replacements in this format- ${account_id}.
       "Sid": "Allow attachment of persistent resources",
       "Effect": "Allow",
       "Principal": {
-        "AWS": [
-          "${key_admin_arn}"
-        ]
+        "AWS": ["${key_admin_arn}"]
       },
-      "Action": [
-        "kms:CreateGrant",
-        "kms:ListGrants",
-        "kms:RevokeGrant"
-      ],
+      "Action": ["kms:CreateGrant", "kms:ListGrants", "kms:RevokeGrant"],
       "Resource": "*",
       "Condition": {
         "Bool": {

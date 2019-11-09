@@ -114,7 +114,7 @@ and a **provider.aws.tf**
 provider "aws" {
   region  = "eu-west-1"
   version = "2.31"
-}
+}```
 
 Run this once and it will create your state bucket named "${data.aws_caller_identity.current.account_id}-terraform-state".
 
@@ -132,7 +132,7 @@ terraform {
 }
 ```
 
-## locking and unlock state buckets
+## Locking and unlock state buckets
 
 When you add a state bucket you should also enable locking.
 Locking is prevent clashes, when 2 developers/processes try to modify the same resource at the same time.

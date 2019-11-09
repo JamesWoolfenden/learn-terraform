@@ -21,7 +21,7 @@ If you find yourself wanting to install packages at launch with **remote-exec** 
 
 ### Connections
 
-Remote Provisoners need authentication, probably via SSH [God forbid it **winrm**]. So you now have SSH key, password or certificate  management issues. You also need to be on a network that allows it. You may have to connect through a bastion host.
+Remote Provisoners need authentication, probably via SSH [God forbid it **winrm**]. So you now have SSH key, password or certificate management issues. You also need to be on a network that allows it. You may have to connect through a bastion host.
 
 ### Connection forwarding
 
@@ -63,8 +63,8 @@ TODO
 on_failure = "continue"
 
 !!!Note Other Provisioners
-    I have never used these provisioners, if you have some legacy scripts you want to exploit they may have be useful.
-    Chef provisioner
+I have never used these provisioners, if you have some legacy scripts you want to exploit they may have be useful.
+Chef provisioner
 
     Puppet provisioner
 
@@ -95,12 +95,12 @@ Are well covered here [https://www.terraform.io/docs/configuration/functions.htm
 - lists
 
 - null
-passing
-blocks
-lists
+  passing
+  blocks
+  lists
 
 - locals
-Terraform doesn't support interpolation of variables in variables.
+  Terraform doesn't support interpolation of variables in variables.
 
 So although it would be **AWESOME** if this worked:
 
@@ -130,7 +130,7 @@ locals {
 
 To reference the local you use:
 
-*local.fullname* instead of *var.fullname*
+_local.fullname_ instead of _var.fullname_
 
 See the Terraform docs [here](https://www.terraform.io/docs/configuration/locals.html)
 
@@ -141,10 +141,12 @@ See the Terraform docs [here](https://www.terraform.io/docs/configuration/locals
 ### Objects
 
 You can define lists of a type or multiple types.
+
 ```terraform
   type        = list(map(string))
 ```
-or 
+
+or
 
 ```terraform
 variable "database" {

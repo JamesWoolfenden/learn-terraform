@@ -66,14 +66,14 @@ Or have your own CI process for your modules.
 You need to tag and then push the tag to the upstream repository.
 
 !!! note "Git and tags"
-    You can also set your git config to always follow tags:
-    
+You can also set your git config to always follow tags:
+
     ```cli
     git config --global push.followTags true
     ```
-    
+
     With the tags set and  pushed, you can now set the source reference to link to the tag:
-    
+
     ```terraform
     module "S3" {
         source="git::git@github.com:JamesWoolfenden/terraform-aws-s3.git?ref=0.0.1"
@@ -381,15 +381,15 @@ Add in a file called README.md into the root.
 Add all the contents to your new repository you created. There is a naming format for [Registries](https://www.terraform.io/docs/registry/modules/publish.html).
 
 !!!Note Extra credit
-    
+
     - Publish and make it public, [see standard structure](https://www.terraform.io/docs/modules/#standard-module-structure)
-    
+
     - Connect up your Github account with the Terraform registry
-    
+
     - Select a repository and publish
 
     - Add build to Gitlab/Travis/Circleci
-   
+
     - Tag it
-    
+
     - [Advanced Module composition](https://www.terraform.io/docs/modules/composition.html)

@@ -96,7 +96,7 @@ If you apply now the latest xenial AMI will start, and as just about every other
 
 The currently provisioned instance has no access as no SSH key was specified, you can manually upload your ssh key to AWS or automatically provision one.
 
-Create an SSH key by adding  **tls_private_key.ssh.tf**
+Create an SSH key by adding **tls_private_key.ssh.tf**
 
 ```terraform
 resource "tls_private_key" "ssh" {
@@ -180,8 +180,8 @@ resource aws_security_group ssh {
 ```
 
 !!! Warning Security
-    In the ingress I use a CIDR of "0.0.0.0/0", which is wide open to the world. Id normally restict this my own IP.
-    You could also make the Ingress group optional and deprovision it all together at a later date.
+In the ingress I use a CIDR of "0.0.0.0/0", which is wide open to the world. Id normally restict this my own IP.
+You could also make the Ingress group optional and deprovision it all together at a later date.
 
 and finally add update **outputs.tf** to get the public to get the Public ip to SSH into.
 
@@ -222,7 +222,7 @@ total 32
 ```
 
 !!! Warning
-    Do not add keys to Git
+Do not add keys to Git
 
 !!! Info
-    Run "Terraform destroy" to cleanup.
+Run "Terraform destroy" to cleanup.

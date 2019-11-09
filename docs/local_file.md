@@ -17,7 +17,7 @@ You now have the content of the file in **data.local_file.public_key.content**
 ### For Making files
 
 - To write templated files to disk
-  
+
 ```terraform
 resource "local_file" "remote_state" {
   content  = data.template_file.remote_state.rendered
@@ -26,7 +26,7 @@ resource "local_file" "remote_state" {
 ```
 
 - Write ssh keys to disk for TLS provider
-  
+
 ```terraform
 resource "tls_private_key" "vpn" {
   algorithm = "RSA"

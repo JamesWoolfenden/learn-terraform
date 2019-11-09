@@ -57,7 +57,7 @@ terraform {
 }
 ```
 
-Where we have an S3 bucket *s3://121334234343-terraform-state* with a folder aws-lambda-wilbur/lambda/ as this is a environment called **lambda** for the template **aws-lambda-wilbur**.
+Where we have an S3 bucket _s3://121334234343-terraform-state_ with a folder aws-lambda-wilbur/lambda/ as this is a environment called **lambda** for the template **aws-lambda-wilbur**.
 
 ### Importance of setting version
 

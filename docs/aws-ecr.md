@@ -43,4 +43,4 @@ This module has a full example to follow:
 [https://github.com/JamesWoolfenden/terraform-aws-ecr/tree/master/example/exampleA](https://github.com/JamesWoolfenden/terraform-aws-ecr/tree/master/example/exampleA)
 
 !!!Note
-    Following https://github.com/JamesWoolfenden/terraform-aws-ecr
+Following https://github.com/JamesWoolfenden/terraform-aws-ecr

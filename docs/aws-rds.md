@@ -151,7 +151,7 @@ Now you have a connected SQL prompt so you can run your now SQL against the db.
 
 ### Warning
 
-Earlier I set a property -  publicly_accessible="true" that made your db public, we wouldn't normally allow a db to be public.
+Earlier I set a property - publicly_accessible="true" that made your db public, we wouldn't normally allow a db to be public.
 
 ## Multiple DBs
 
@@ -189,4 +189,4 @@ Terraform RDS <https://www.terraform.io/docs/providers/aws/r/db_instance.html>
 AWS RDS terraform modul example <https://github.com/terraform-aws-modules/terraform-aws-rds/tree/master/examples/complete-mysql>
 
 !!! Warning
-    Delete you DB's and Clusters after you've finsihed as they cost ££££
+Delete you DB's and Clusters after you've finsihed as they cost ££££

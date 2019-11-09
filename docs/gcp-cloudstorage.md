@@ -10,7 +10,7 @@ helm serve --repo-path ./charts
 
 This supplies a sample **index.yaml**, which is added as part of the repo creation process [it's in the template folder for the example].
 
-When you provision the example it will create a public helm repo. You will have to change the name as they are required to be globally unique. 
+When you provision the example it will create a public helm repo. You will have to change the name as they are required to be globally unique.
 
 <https://helm-repo-examplea.storage.googleapis.com/>
 
@@ -56,4 +56,4 @@ This being GCP you'll get this error when was making this project, your service 
 ```
 
 !!!Note Links
-    <https://github.com/JamesWoolfenden/terraform-gcp-storage>
+<https://github.com/JamesWoolfenden/terraform-gcp-storage>

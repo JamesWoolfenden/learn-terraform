@@ -45,6 +45,7 @@ variable "database" {
 ```
 
 Setting database to
+
 ```HCL
     database=[{
         name= "my-database"

@@ -88,8 +88,8 @@ Run Terraform init and then apply:
 You now have your GCP auth set-up.
 
 !!! note "Tip - Create a GCP project called **examplea**"
-    All the GCP examples are based around a project called examplea.
-    Instead of updating your providers, save yourself some time and create yourself a project called examplea.
+All the GCP examples are based around a project called examplea.
+Instead of updating your providers, save yourself some time and create yourself a project called examplea.
 
 ## Terraform commands
 
@@ -301,7 +301,7 @@ To force the recreation of an object you can taint it, to force it to be changed
 
 ```bash
 terraform taint aws_instance.web
-````
+```
 
 ## Modifying existing infrastructure
 
@@ -333,6 +333,6 @@ And usually in this order.
     ```
 
 !!!Note Extras
-    [WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
-    
+[WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
+
     [How to set up WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
