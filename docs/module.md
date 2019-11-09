@@ -380,14 +380,16 @@ Add in a file called README.md into the root.
 
 Add all the contents to your new repository you created. There is a naming format for [Registries](https://www.terraform.io/docs/registry/modules/publish.html).
 
-## Extra credit
+!!!Note Extra credit
+    
+    - Publish and make it public, [see standard structure](https://www.terraform.io/docs/modules/#standard-module-structure)
+    
+    - Connect up your Github account with the Terraform registry
+    
+    - Select a repository and publish
 
-- Publish and make it public
-
-- Connect up your Github account with the Terraform registry
-
-- Select a repository and publish
-
-- Add build to Gitlab/Travis/Circleci
-
-- Tag it
+    - Add build to Gitlab/Travis/Circleci
+   
+    - Tag it
+    
+    - [Advanced Module composition](https://www.terraform.io/docs/modules/composition.html)

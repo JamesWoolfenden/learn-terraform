@@ -2,7 +2,7 @@
 
 We'll here's something to be really proud of.
 
-```
+```terraform
 resource "null_resource" "waiter" {
   depends_on = ["aws_iam_instance_profile.ec2profile"]
 

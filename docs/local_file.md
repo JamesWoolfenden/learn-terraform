@@ -3,11 +3,13 @@
 ## Data source
 
 Gets the contents of a file.
-```
+
+```terraform
 data "local_file" "public_key" {
     filename = "${path.module}/id_rsa.pub"
 }
 ```
+
 You now have the content of the file in **data.local_file.public_key.content**
 
 ## Resource
@@ -15,6 +17,7 @@ You now have the content of the file in **data.local_file.public_key.content**
 ### For Making files
 
 - To write templated files to disk
+  
 ```terraform
 resource "local_file" "remote_state" {
   content  = data.template_file.remote_state.rendered
@@ -23,6 +26,7 @@ resource "local_file" "remote_state" {
 ```
 
 - Write ssh keys to disk for TLS provider
+  
 ```terraform
 resource "tls_private_key" "vpn" {
   algorithm = "RSA"
