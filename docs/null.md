@@ -1,6 +1,6 @@
 # Null
 
-We'll heres something to be really proud of.
+We'll here's something to be really proud of.
 
 ```
 resource "null_resource" "waiter" {
