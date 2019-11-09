@@ -27,9 +27,10 @@ nav:
       - Cloud Storage: gcp-cloudstorage.md
   - IAM:
       - AWS: aws-iam.md
-#      - GCP: gcp-iam.md
+      - GCP: gcp-iam.md
   - DNS:
       - Route 53: aws-dns.md
+      - gcp: gcp-dns.md
   - Advanced State: adv-state.md
   - Creating Modules: module.md
   - SourceCode:
@@ -42,7 +43,25 @@ nav:
           - GKE: gcp-kubernetes.md
   - Logging:
       - Cloudwatch: aws-cloudwatch.md
-#  - Terraform cloud: tfe.md
+  - Workspaces: workspaces.md
+  - Terraform cloud: tfe.md
+  - Providers:
+      - Utilities:
+          - Local file: local_file.md
+          - Template: template.md
+          - Random: random.md
+          - Terraform: terraform.md
+          - TLS: tls.md
+          - DNS: dns.md
+          - Null: null.md
+      - Status Cake: statuscake.md
+      - Pager Duty: pagerduty.md
+      - Docker: docker.md
+      - Vault: vault.md
+      - Github: github.md
+      - Gitlab: gitlab.md
+      - Consul: consul.md
+      - Vault: vault.md
   - Style Guide: style-guide.md
   - Help: help.md
   - About: about.md
