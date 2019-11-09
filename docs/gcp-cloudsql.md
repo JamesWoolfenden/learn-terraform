@@ -1,6 +1,6 @@
 # CloudSQL
 
-You need to have enabled the API's for this to work if you haven't used this part of GCP before:
+A pre-requisite is to have enabled the API's for this to work if you haven't used this part of GCP before:
 
 [servicenetworking.googleapis.com](https://console.developers.google.com/apis/api/servicenetworking.googleapis.com/overview)
 
@@ -13,7 +13,7 @@ Storage Admin
 Cloud SQL Admin
 ```
 
-To your Terraform user.
+To your Terraform Service user [hopefully].
 
 ## Private Instance
 
