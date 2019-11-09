@@ -77,7 +77,7 @@ Add a terraform.state to your .gitignore to ensure this doesnt happen.
 
 ### Don't try to edit state files
 
-You'll mess it up. Yes you will. It's like edit a SQL db by hand. That is also a sub-optimal idea.
+You'll mess it up. Yes you will. It's like editing a SQL DB by hand. That is also a sub-optimal idea.
 
 ### Do use a locking backend
 
