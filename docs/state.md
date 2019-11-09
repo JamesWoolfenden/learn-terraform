@@ -42,7 +42,7 @@ A simple one looks like this:
 
 The state file holds a record of inputs, outputs and resources created. A state file is a record of what infrastructure was made or that existed at the last run.
 
-A Typical setup is to create an S3 bucket and configure that to store state, this is called a remote backend.
+A typical setup is to create an S3 bucket and configure that to store state, this is called a remote backend.
 With-in that bucket multiple state files from many different project would exist from One AWS/GCP account/project. Each projects' remote backend would look similar to **remote_state.tf** below:
 
 ```terraform
@@ -57,7 +57,7 @@ terraform {
 }
 ```
 
-Where we have an s3 bucket *s3://121334234343-terraform-state* with a folder aws-lambda-wilbur/lambda/ as this is a environment called **lambda** for the template **aws-lambda-wilbur**.
+Where we have an S3 bucket *s3://121334234343-terraform-state* with a folder aws-lambda-wilbur/lambda/ as this is a environment called **lambda** for the template **aws-lambda-wilbur**.
 
 ### Importance of setting version
 
