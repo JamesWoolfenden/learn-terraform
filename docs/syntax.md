@@ -141,6 +141,10 @@ See the Terraform docs [here](https://www.terraform.io/docs/configuration/locals
 ### Objects
 
 You can define lists of a type or multiple types.
+```terraform
+  type        = list(map(string))
+```
+or 
 
 ```terraform
 variable "database" {
