@@ -73,7 +73,7 @@ The state file is written with the version number - see the line above
 
 ### Don't check-in terraform.tfstate
 
-Add a terraform.state to ensure this doesnt happen.
+Add a terraform.state to your .gitignore to ensure this doesnt happen.
 
 ### Don't try to edit state files
 
