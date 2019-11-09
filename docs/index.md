@@ -3,7 +3,7 @@
 ## What is Terraform
 
 Terraform is a language and tool for creating infrastructure via a technique called Infrastrucuture as Code.
-This is an example of an AWS instance, know as a resource, called "web" described in Terraform with 4 properies set:
+This is an example of an AWS instance, know as a resource, called "web" described in Terraform with 4 properties set:
 
 ```terraform
 resource "aws_instance" "web" {
