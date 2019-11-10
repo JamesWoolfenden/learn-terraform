@@ -12,6 +12,8 @@ validate
 bump and version
 ```
 
+More details on the available syntax for actions is here <https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions>.
+
 This example is based on this [example](https://github.com/JamesWoolfenden/terraform-aws-githubactions)
 
 Add a file called **main.yml** to the folder _.github/workflows/_

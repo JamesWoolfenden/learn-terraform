@@ -50,7 +50,7 @@ nav:
   - Advanced State: adv-state.md
   - Modules:
       - Creating: module.md
-      - Github Action: github_actions.md
+      - Github Actions: github-actions.md
   - SourceCode:
       - CodeCommit: aws-codecommit.md
   - Containers:
