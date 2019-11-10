@@ -48,7 +48,9 @@ nav:
       - Route 53: aws-dns.md
       - gcp: gcp-dns.md
   - Advanced State: adv-state.md
-  - Creating Modules: module.md
+  - Modules:
+      - Creating: module.md
+      - Github Action: github_actions.md
   - SourceCode:
       - CodeCommit: aws-codecommit.md
   - Containers:
@@ -111,4 +113,5 @@ extra:
 # Copyright
 copyright: "Copyright &copy; 2019 - 2019 Slalom, LLC"
 site_author: "James Woolfenden"
-google_analytics: ["UA-151885688-1", "slalom-consulting-ltd.github.io/learn-terraform/"]
+google_analytics:
+  ["UA-151885688-1", "slalom-consulting-ltd.github.io/learn-terraform/"]
