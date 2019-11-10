@@ -2,7 +2,11 @@
 
 Github Actions now supports many pre-built actions and workflows. To build a module, the existing simple workflow can be added to your Github repo.
 
-```
+![Actions](githubactions.png)
+
+A minimal module build process is:
+
+```bash
 init
 validate
 bump and version
@@ -51,6 +55,8 @@ jobs:
 ```
 
 Then when you commit a change to master this action will init and validate on the folder **example/examplea** and then if successful tags the version number.
+
+![Building](actions-building.png)
 
 !!!Note
     This example extends:
