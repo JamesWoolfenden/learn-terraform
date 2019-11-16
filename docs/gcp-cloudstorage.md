@@ -18,14 +18,14 @@ This example has a mininal **index.yaml**
 
 ## Adding the repo to your Helm
 
-```cli
+```helm
 helm repo add baby-steps https://helm-repo-examplea.storage.googleapis.com/
 "baby-steps" has been added to your repositories
 ```
 
 Verify:
 
-```cli
+```helm
 $helm repo list
 NAME            URL
 stable          https://kubernetes-charts.storage.googleapis.com
