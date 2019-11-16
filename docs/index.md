@@ -1,5 +1,9 @@
 # Learn Terraform
 
+[![Latest Release](https://img.shields.io/github/v/tag/slalom-consulting-ltd/learn-terraform.svg)](https://github.com/JamesWoolfenden/learn-terraform-web)
+
+By [James Woolfenden](https://www.linkedin.com/in/jameswoolfenden/)
+
 ## What is Terraform
 
 Terraform is a language and tool for creating infrastructure via a technique called Infrastrucuture as Code.
