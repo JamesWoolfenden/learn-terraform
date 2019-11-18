@@ -50,9 +50,9 @@ or
 [GCP](https://github.com/terraform-providers/terraform-provider-google) and its
 [changelog](https://github.com/terraform-providers/terraform-provider-google/blob/master/CHANGELOG.md)
 
-Current release of Terraform ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/hashicorp/terraform)
+Current Terraform [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hashicorp/terraform)](https://github.com/hashicorp/terraform/releases/latest)
 
-This site focuses on how to use the free edition features in the Open source tool and Terraform Cloud.
+This site focuses on how to use the free edition and features of the Open source tool and Terraform Cloud.
 Unless called out, all AWS infrastructure will be provisioned in just one AWS region.
 
 ## Rationale
