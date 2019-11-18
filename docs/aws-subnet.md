@@ -1,7 +1,7 @@
-# Creating a Sub-net in AWS
+# Creating a Subnet in AWS
 
-The Terraform below is almost the most minimal Terraform configuration to create one sub-net.
-A sub-net is a division of a VPC in one Availability Zone.
+The Terraform below is almost the most minimal Terraform configuration to create one subnet.
+A subnet is a division of a VPC in one Availability Zone.
 
 There is therefore a dependency to a VPC & its vpc_id and it has a smaller CIDR block, here, of 256 IPs.
 
@@ -20,7 +20,7 @@ $ terraform apply
 ...
 ```
 
-Making one just one sub-net is an unusual activity, as is not specifying the AvailabilityZone it is in or the Routes.
+Making one just one subnet is an unusual activity, as is not specifying the AvailabilityZone it is in or the Routes.
 It is more common to see (if your in a 3 zone region) a Private and Public Subnet for each availability zone in a Region.
 
 How many Availability Zones are there in this region?
@@ -114,7 +114,7 @@ So the Subnets may be called Public, but they still aren't.
 
 ## Routing
 
-So what make a sub-net public? The subnet need to be connected to the Internet. A common way is to connect and route an Internet Gateway.
+So what make a subnet public? The subnet need to be connected to the Internet. A common way is to connect and route an Internet Gateway.
 Add in **aws_internet_gateway.gw.tf**
 
 ```terraform

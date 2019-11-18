@@ -14,3 +14,7 @@
 12. Use common_tags to help you follow a tagging strategy.
 13. Set Versions for providers if possible.
 14. Automate build process for modules.
+
+## Modules
+
+1. Passing data versus data sources.

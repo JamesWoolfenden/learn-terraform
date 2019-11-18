@@ -149,6 +149,8 @@ output "function" {
 
 ## Listof
 
+todo
+
 ### Objects
 
 You can define lists of a type or multiple types.
@@ -228,4 +230,35 @@ One of the awesome things that Terraform normally just does correctly, nearly al
 
 ### depends_on
 
+You can set the **depends_on** keyword on a resource to force a dependency, it shouldn't be needed.
+I have had to use in the past on objects that while the provider said they were created, were actually in the process of being created, being replication across regions and eventually consistent.
+
 ### depends_on with modules
+
+Depends_on became a keyword with Terraform 0.12, you can achieve the same with 0.12.
+
+```terraform
+variable "vm_depends_on" {
+  type    = any
+  default = null
+}
+
+resource "aws_instance" "web" {
+  depends_on = [var.vm_depends_on]
+
+  # ...
+}
+```
+
+If the file above becomes part of a module:
+
+```terraform
+module "web" {
+  source = "..."
+
+  vm_depends_on = [module.anyobject.youchoose]
+}
+```
+
+!!!Note
+     After <https://discuss.hashicorp.com/t/tips-howto-implement-module-depends-on-emulation/2305/2>

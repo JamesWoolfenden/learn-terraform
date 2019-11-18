@@ -1,14 +1,22 @@
 # Structuring your code
 
+todo
+
 - terraform with app code
 
 - infrastructure only
   Making account structure, networks and subs users and auth
 
-# level of control
+## level of control
 
-# infrastructure projects verses application development
+todo
+
+## infrastructure projects verses application development
+
+todo
 
 from base AWS account to application level
 
-# multi account development issues
+## multi account development issues
+
+todo

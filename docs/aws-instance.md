@@ -1,6 +1,6 @@
 # Creating an EC2 Instance
 
-## Make an instance in a public sub-net
+## Make an instance in a public subnet
 
 Open your shell again and get a new scaffold:
 

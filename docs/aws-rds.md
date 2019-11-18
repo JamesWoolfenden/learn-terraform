@@ -109,9 +109,9 @@ Applying that should succeed, mine took around 4mins in my testing, and finally 
 endpoint = employee.ch6wpf7x4jbf.eu-west-1.rds.amazonaws.com:3306
 ```
 
-There are a large number of properties other than the ones we have supplied, so many defaults are being assumed. So far we haven't specified the VPC or even a Sub-net. Provisioning will add your DB instance in with many of the defaults.
+There are a large number of properties other than the ones we have supplied, so many defaults are being assumed. So far we haven't specified the VPC or even a Subnet. Provisioning will add your DB instance in with many of the defaults.
 
-Terraform displays that the instance has been provisoned, but we do need to verify.
+Terraform displays that the instance has been provisioned, but we do need to verify.
 
 ## Testing DB Instance
 
