@@ -17,6 +17,10 @@ resource "aws_instance" "web" {
   key_name      = aws_key_pair.ssh.key_name
 }
 ```
+What does that mean?
+
+The first line starts with
+**Resource** this declares the type of object, in this case a resource, alterative include module, data or variable.
 
 When Terraform is run it will check and create if not existing already. If different it will fix the drift in the object to look like the specifiation.
 
