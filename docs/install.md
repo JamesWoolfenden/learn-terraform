@@ -303,6 +303,16 @@ To force the recreation of an object you can taint it, to force it to be changed
 terraform taint aws_instance.web
 ```
 
+### Targeting
+
+It can be very useful to just target one resource at a time, in the previous example just one resource was tainted and a similar method can be used with apply:
+
+```terraform
+terraform apply --target module.webbfarm.aws_instance.web
+```
+
+Which would only target **module.webbfarm.aws_instance.web** and **ITS' DEPENDENCIES**.
+
 ## Modifying existing infrastructure
 
 If the definition differs from the existing state captured. Some properties changing causes existing objects to be modified others the recreation.
