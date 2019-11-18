@@ -38,7 +38,7 @@ brew install aws-cli
 cinst aws-cli
 ```
 
-You will either be supplied you cli credentiasl by your administrator or you can obtain your own from your own user IAM section.
+You will either be supplied you cli credentials by your administrator or you can obtain your own from your own user IAM section.
 
 ```cli
 $ aws configure
@@ -49,7 +49,7 @@ Default output format [json]:
 ```
 
 There are many more way to provide AWS Authentication than this.
-Old examples may show the hardcoding of secrets or the use of vars to then pass them in. Do not.
+Old examples may show the hard-coding of secrets or the use of vars to then pass them in. Do not.
 
 ```aws
 provider "aws" {
@@ -133,7 +133,7 @@ All other commands:
     state              Advanced state management
 ```
 
-That's a lot of commands, however there are only handful of actually common commands, 90% of the time it is an just terraform and:
+That's a lot of commands, however there are only handful of actually common commands, 90% of the time it is an just Terraform and:
 
 ### Init
 
@@ -157,7 +157,7 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-Terraform init can be thought of an equivalent to git init, it downloads provider executables, modules and does an initial syntax check, all into a .terraform folder.
+Terraform init can be thought of an equivalent to git init, it downloads the provider executable, modules and does an initial syntax check, all into a .terraform folder.
 
 For the full description its:
 
