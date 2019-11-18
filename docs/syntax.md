@@ -63,8 +63,8 @@ TODO
 on_failure = "continue"
 
 !!!Note Other Provisioners
-I have never used these provisioners, if you have some legacy scripts you want to exploit they may have be useful.
-Chef provisioner
+    I have never used these provisioners, if you have some legacy scripts you want to exploit they may have be useful.
+    Chef provisioner
 
     Puppet provisioner
 
@@ -133,6 +133,17 @@ To reference the local you use:
 _local.fullname_ instead of _var.fullname_
 
 See the Terraform docs [here](https://www.terraform.io/docs/configuration/locals.html)
+
+## Outputs
+
+I use an **Outputs.tf** in my templates and modules, it helps with re-use and extensibility if you pass out complex data objects to your output.
+This is now valid:
+
+```terraform
+output "function" {
+    value= google_cloudfunctions_function.lambda
+}
+```
 
 ## new in TF 0.12
 
