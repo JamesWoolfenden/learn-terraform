@@ -20,10 +20,10 @@ resource "aws_instance" "web" {
 
 ### What it means
 
-The first line starts with **Resource** this declares the type of object, in this case a resource, alternatives include module, data or variable.
+The first line starts with **Resource**, this declares the type of object, in this case a resource, alternatives include module, data or variable.
 
 "aws_instance" is the type of resource, in this case an instance or EC2 Virtual Machine.
-"web" this is the object name, the name this is up to you, the brackets are a fairly normal declaration of an object, but the opening must start on the first line.
+"web" this is just the object name, the name is up to you. The brackets are a fairly typical declaration of an object, the opening must be on the first line.
 
 ```ami           = data.aws_ami.xenial.id```
 
@@ -35,11 +35,13 @@ The property *instance_type* has been hard-coded to the string value.
 
 ```tags          = var.common_tags```
 
-The tags property has been set to *var.common_tags* which is a declared variable called common_tags.
+The tags property has been set to *var.common_tags*, which is a declared variable called common_tags.
 
-When Terraform is run it will check and create the resource if not existing already. If it's different it will fix the drift in the object to look like the specification.
+Then when Terraform is run, it will check and create the resource if it's not existing already. If it's different, it will fix the *drift* in the object to make it as the specification.
 
-The Terraform tool is written in Go-lang, and available for many platforms as a single executable binary, you can find the source is hosted on Github here:
+### The tool
+
+The Terraform tool is written in Go-lang, and available for many platforms as a single executable binary, you can find the source hosted on Github here:
 [Terraform](https://github.com/hashicorp/terraform), it is being actively developed and there are very regular updates to its core [changelog](https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md)
 and to it's [providers](https://github.com/terraform-providers):
 [AWS](https://github.com/terraform-providers/terraform-provider-aws) and it's
@@ -48,13 +50,15 @@ or
 [GCP](https://github.com/terraform-providers/terraform-provider-google) and its
 [changelog](https://github.com/terraform-providers/terraform-provider-google/blob/master/CHANGELOG.md)
 
-This chapter focuses on how to use the free edition features in the Open source tool and Terraform Cloud.
+Current release of Terraform ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/hashicorp/terraform)
+
+This site focuses on how to use the free edition features in the Open source tool and Terraform Cloud.
 Unless called out, all AWS infrastructure will be provisioned in just one AWS region.
 
 ## Rationale
 
 Terraform is a second generation DevOps tool, it is designed to help you provision infrastructure.
-Templates are designed in Hashicorp Configuration Language (HCL) to describe how your infrastructure should be, and can be used to create and model your infrastrucuture, as well as being part of your Configuration Management Toolchain.
+Templates are designed in Hashicorp Configuration Language (HCL) to describe how your infrastructure should be, and can be used to create and model your infrastructure, as well as being part of your Configuration Management Tool-chain.
 
 ## Alternatives
 
