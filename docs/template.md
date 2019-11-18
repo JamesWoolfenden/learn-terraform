@@ -1,6 +1,6 @@
 # Template
 
-Used to tranform template files with a selection of variables. In this case a templated IAM policy **key_policy.json.tpl**
+Used to transform template files with a selection of variables. In this case a templated IAM policy **key_policy.json.tpl**
 Templates replacements in this format- \${account_id}.
 
 ```json

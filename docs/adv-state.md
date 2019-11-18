@@ -232,7 +232,7 @@ resource "aws_s3_bucket" "whosebucketisitanyway" {
 }
 ```
 
-So you will need to make the file **aws_s3_bucket.whosebucketisitanyway.tf** to succesfully associate it.
+So you will need to make the file **aws_s3_bucket.whosebucketisitanyway.tf** to successfully associate it.
 
 ```cli
 resource "aws_s3_bucket" "whosebucketisitanyway" {

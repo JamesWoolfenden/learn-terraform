@@ -73,7 +73,7 @@ The state file is written with the version number - see the line above
 
 ### Don't check-in terraform.tfstate
 
-Add a terraform.state to your .gitignore to ensure this doesnt happen.
+Add a terraform.state to your *.gitignore* to ensure this doesn't happen.
 
 ### Don't try to edit state files
 
@@ -100,7 +100,7 @@ terraform {
 
 You'll probably forget this at some point and one of you will make the state file incompatible for the team.
 
-If you are adding this code to git. You are? no you are. Then add a .gitignore to the root of your repo based from <https://github.com/github/gitignore/blob/master/Terraform.gitignore>.
+If you are adding this code to git. You are? no you are. Then add a *.gitignore* to the root of your repo based from <https://github.com/github/gitignore/blob/master/Terraform.gitignore>.
 Also copy the pre-commit file and install it.
 
 ## State recovery/import

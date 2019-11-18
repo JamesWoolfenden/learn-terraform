@@ -20,11 +20,11 @@ $ terraform apply
 ...
 ```
 
-Making one just one sub-net is an unusual actvity, as is not specifying the AvailabityZone it is in or the Routes.
-It is more common to see (if your in a 3 zone region) a Private and Public Subnet for each availablity zone in a Region.
+Making one just one sub-net is an unusual activity, as is not specifying the AvailabilityZone it is in or the Routes.
+It is more common to see (if your in a 3 zone region) a Private and Public Subnet for each availability zone in a Region.
 
 How many Availability Zones are there in this region?
-You could hardcode this a variable and put the strings in your Terraform.tfvars, fortunately there's a better dynamic way.
+You could hard-code this a variable and put the strings in your Terraform.tfvars, fortunately there's a better dynamic way.
 
 Add **data.tf** to aws_vpc template.
 
@@ -61,7 +61,7 @@ locals{
 }
 ```
 
-And Append variales.tf with:
+And Append variables.tf with:
 
 ```terraform
 variable "cidr" {
@@ -83,7 +83,7 @@ That's quite and lot different and dropped a whole heap of new stuff, so time fo
 count             = length(data.aws_availability_zones.available.names)
 ```
 
-This makes as many of the object aws_subnet.public as length(data.aws_availability_zones.available.names) evaluates to. That'll depends on how many Availabilty Zones are in your region, but it'll probably be 3.
+This makes as many of the object aws_subnet.public as length(data.aws_availability_zones.available.names) evaluates to. That'll depends on how many Availability Zones are in your region, but it'll probably be 3.
 
 ## Locals
 
@@ -144,6 +144,6 @@ That's a complete set of public subnets. The next step would be to make a set of
 Not only can you get Design patterns to create your base networking, but you can get the Terraform as well, written by the Platform itself, so as setting up the basic VPC structure in AWS is a solved problem, you can use one of a number of tried and tested designs from the registry:
 
 !!!Note Links:
-<https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/1.60.0> has nearly 900k uses and rising, thats a lots of field testing and it saves a tonne of typing.
-
+    <https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/1.60.0> has nearly 900k uses and rising, thats a lots of field testing and it saves a tonne of typing.
+    
     <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html>

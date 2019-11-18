@@ -1,6 +1,6 @@
 # Github Provider
 
-Needs an organisation
+Needs an organization
 
 todo
 

@@ -28,7 +28,7 @@ resource "aws_autoscaling_group" "web" {
 }
 ```
 
-Replacing one resource for two might not seem like an obvious gain, but functional it's big, now should you lose the instance a new one will be started automatically. A launch configutation can be used as a foundational component of a blue-green deployment strategy.
+Replacing one resource for two might not seem like an obvious gain, but functional it's big, now should you lose the instance a new one will be started automatically. A launch configuration can be used as a foundational component of a blue-green deployment strategy.
 
 Typically this can be achieved by updating the AMI of the Launch config, and then Scaling out and then In, this action removes the oldest EC2 instance.
 

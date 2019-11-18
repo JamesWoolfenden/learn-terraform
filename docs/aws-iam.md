@@ -7,7 +7,7 @@ Json based roles, user and policies. This is the authentication scheme at the he
 ## Create a policy with HEREDOC
 
 IAM policies can be added via the console either using the AWS wizards or as JSON files.
-You can add a Json polic in directly to your terraform policy if you use a HEREDOC.
+You can add a Json policy in directly to your terraform policy if you use a HEREDOC.
 A Heredoc allows you to paste in a multiline string.
 **aws_iam_policy.heredoc.tf** below is an example of using a Heredoc in a policy statement.
 
@@ -89,7 +89,7 @@ data "aws_iam_policy_document" "heredoc" {
 }
 ```
 
-And modify the policy reaource to use this data resource.
+And modify the policy resource to use this data resource.
 
 ```terraform
 resource "aws_iam_policy" "heredoc" {
@@ -133,10 +133,10 @@ data "aws_iam_policy_document" "assume_role_policy" {
 
 ## Attaching policy to a role
 
-When you use policies you might hear alot about 2 types of policies:
+When you use policies you might hear a lot about 2 types of policies:
 
 - Unmanaged/inline policy
-  Inline policies are child objects of a role or user, and dont count in your account limit. They are good for creating policies that are not for re-use. A policy with a single responsibility or use.
+  Inline policies are child objects of a role or user, and don't count in your account limit. They are good for creating policies that are not for re-use. A policy with a single responsibility or use.
 
 In Terraform you can use an aws_iam_role_policy resource to create an inline policy on a role:
 
@@ -168,7 +168,7 @@ resource "aws_iam_policy" "pipeline" {
 }
 ```
 
-This policy still isnt associated or attached to your role.
+This policy still isn't associated or attached to your role.
 A policy is attached with an **aws_iam_role_policy_attachment** resource.
 
 ```terraform

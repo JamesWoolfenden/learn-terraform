@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-Rather than hardcoding the AMI like above, a better and more maintainable way it to get the latest AMI made of that type:
+Rather than hard-coding the AMI like above, a better and more maintainable way it to get the latest AMI made of that type:
 Adding an ami data source is a better way, like this one for ubuntu xenial **data.aws_ami.xenial.tf**:
 
 ```terraform
@@ -180,7 +180,7 @@ resource aws_security_group ssh {
 ```
 
 !!! Warning Security
-In the ingress I use a CIDR of "0.0.0.0/0", which is wide open to the world. Id normally restict this my own IP.
+In the ingress I use a CIDR of "0.0.0.0/0", which is wide open to the world. Id normally restrict this my own IP.
 You could also make the Ingress group optional and deprovision it all together at a later date.
 
 and finally add update **outputs.tf** to get the public to get the Public ip to SSH into.

@@ -226,7 +226,7 @@ Destroy complete! Resources: 1 destroyed.
 
 Now in AWS were back to as if we hadn't started.
 
-So to recap, we made a VPC, checked for drift, fixed the drift and then cleanuped our environment by destroying all our providisoned infrastructure.
+So to recap, we made a VPC, checked for drift, fixed the drift and then cleaned up our environment by destroying all our provisioned infrastructure.
 
 ## Scaffold revisited
 
@@ -234,7 +234,7 @@ Along with the structure for the template a couple of other files arrived. These
 
 ### .gitignore
 
-This contains a minimal gitignore with Terraform customisations.
+This contains a minimal gitignore with Terraform customizations.
 
 ### .pre-commit-config.yaml
 
@@ -337,8 +337,8 @@ pre-commit installed at .\.git\hooks\pre-commit
 ```
 
 !!! Note Links
-Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
-
+    Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
+    
     Help documents for Terraform AWS Virtual Private Cloud (VPC) object are here <https://www.terraform.io/docs/providers/aws/r/vpc.html>
 
     VPC designs <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html>

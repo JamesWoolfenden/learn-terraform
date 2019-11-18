@@ -11,7 +11,7 @@ Terraform can be written for re-use by defining your code as a module. Modules d
 Principles for module creation:
 
 - designed for re-use.
-- environental agnostic.
+- environmental agnostic.
 - has utility not found in resources, - must add something.
 - uses sensible defaults.
 - enables overrides for defaults.
@@ -90,7 +90,7 @@ module "S3" {
 }
 ```
 
-### Terrafom registry
+### Terraform registry
 
 This is the next level up, defining and publishing your module to the Public Terraform registry.
 
@@ -116,7 +116,7 @@ I use tf_scaffold to create new modules and this always adds a pre-commit file. 
 
 ### Test/reference implementation
 
-I have a build/intregration test that builds and destroys one of my modules examples before it tags the module. I am currently using Travis for building, testing and labelling my modules, other CI tools would also work <https://github.com/JamesWoolfenden/terraform-gcp-bastion/blob/master/.travis.yml>
+I have a build/integration test that builds and destroys one of my modules examples before it tags the module. I am currently using Travis for building, testing and labelling my modules, other CI tools would also work <https://github.com/JamesWoolfenden/terraform-gcp-bastion/blob/master/.travis.yml>
 
 ```yaml
 dist: trusty

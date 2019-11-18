@@ -49,7 +49,7 @@ module "storage" {
 
 ## Permissions
 
-This being GCP you'll get this error when was making this project, your service acccount will need these permissions, Included in the "Cloud Storage Admin" role.
+This being GCP you'll get this error when was making this project, your service account will need these permissions, Included in the "Cloud Storage Admin" role.
 
 ```error
  examplea@examplea.iam.gserviceaccount.com does not have storage.buckets.create access to project XXXXXX, forbidden

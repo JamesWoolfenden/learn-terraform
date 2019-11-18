@@ -53,10 +53,10 @@ resource "aws_s3_bucket" "statebucket" {
 ```
 
 !!! Note Callouts
-Notice that this is a private bucket and that it has versioning and delete protection.
-
-and add the file **data.aws_caller_identity.current.tf** to return the AWS account number.
-
+    Notice that this is a private bucket and that it has versioning and delete protection.
+    
+Add the file **data.aws_caller_identity.current.tf** to return the AWS account number.
+    
 ```terraform
 data "aws_caller_identity" "current" {}
 ```
@@ -65,22 +65,22 @@ and the file **aws_dynamodb_table.dynamodb-state-lock.tf**, to help stop concurr
 
 ```terraform
 resource "aws_dynamodb_table" "dynamodb-state-lock" {
-  name           = "dynamodb-state-lock"
-  hash_key       = "LockID"
-  read_capacity  = 20
-  write_capacity = 20
+   name           = "dynamodb-state-lock"
+   hash_key       = "LockID"
+   read_capacity  = 20
+   write_capacity = 20
 
-  attribute {
+   attribute {
     name = "LockID"
     type = "S"
-  }
+   }
 
-  tags = var.common_tags
+   tags = var.common_tags
 }
 ```
 
 With that applied, you will have an S3 locking and versioned Terraform State bucket, that you use for all your work. In this account.
-Dont share state buckets across accounts. **DO NOT**
+Don't share state buckets across accounts. **DO NOT**
 
 To fully implement you also need to add a reference file to all of your templates call it **remote_state.tf**, by using your account number and region, this bucket be different, it will be unique on a account basis.
 The property "key" must be different on every template.
@@ -103,7 +103,7 @@ terraform {
 - can always friendly name endpoint in DNS
 
 !!!Note Links
-[AWS Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/aws/0.2.25)
+    [AWS Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/aws/0.2.25)
 
     [GCP Statebucket](https://registry.terraform.io/modules/JamesWoolfenden/statebucket/gcp/0.2.12)
 

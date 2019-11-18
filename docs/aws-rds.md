@@ -178,7 +178,7 @@ This is because aws_db_instance.employee is now a list, the output reference now
 
 aws_db_instance.employee.*.endpoint
 
-Now try plan angain and you'll find this plans just fine but it but you'll see that it will make 2 databases instances.
+Now try plan again and you'll find this plans just fine but it but you'll see that it will make 2 databases instances.
 
 ### Links
 
@@ -186,7 +186,7 @@ Sample data from <https://dev.mysql.com/doc/employee/en/employees-installation.h
 
 Terraform RDS <https://www.terraform.io/docs/providers/aws/r/db_instance.html>
 
-AWS RDS terraform modul example <https://github.com/terraform-aws-modules/terraform-aws-rds/tree/master/examples/complete-mysql>
+AWS RDS terraform module example <https://github.com/terraform-aws-modules/terraform-aws-rds/tree/master/examples/complete-mysql>
 
 !!! Warning
-Delete you DB's and Clusters after you've finsihed as they cost ££££
+Delete you DB's and Clusters after you've finished as they cost ££££

@@ -6,7 +6,7 @@ By [James Woolfenden](https://www.linkedin.com/in/jameswoolfenden/)
 
 ## What is Terraform
 
-Terraform is a language and tool for creating infrastructure via a technique called Infrastrucuture as Code.
+Terraform is a language and tool for creating infrastructure via a technique called Infrastructure as Code.
 This is an example of an AWS instance, know as a resource, called "web" described in Terraform with 4 properties set:
 
 ```terraform
@@ -17,12 +17,27 @@ resource "aws_instance" "web" {
   key_name      = aws_key_pair.ssh.key_name
 }
 ```
-What does that mean?
 
-The first line starts with
-**Resource** this declares the type of object, in this case a resource, alterative include module, data or variable.
+### What it means
 
-When Terraform is run it will check and create if not existing already. If different it will fix the drift in the object to look like the specifiation.
+The first line starts with **Resource** this declares the type of object, in this case a resource, alternatives include module, data or variable.
+
+"aws_instance" is the type of resource, in this case an instance or EC2 Virtual Machine.
+"web" this is the object name, the name this is up to you, the brackets are a fairly normal declaration of an object, but the opening must start on the first line.
+
+```ami           = data.aws_ami.xenial.id```
+
+The property ami is set to  *data.aws_ami.xenial.id*, *data* means its a data resource, of type *aws_ami* that's been called xenial and supply the property *id*.
+
+``` instance_type="t2.micro"```
+
+The property *instance_type* has been hard-coded to the string value.
+
+```tags          = var.common_tags```
+
+The tags property has been set to *var.common_tags* which is a declared variable called common_tags.
+
+When Terraform is run it will check and create the resource if not existing already. If it's different it will fix the drift in the object to look like the specification.
 
 The Terraform tool is written in Go-lang, and available for many platforms as a single executable binary, you can find the source is hosted on Github here:
 [Terraform](https://github.com/hashicorp/terraform), it is being actively developed and there are very regular updates to its core [changelog](https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md)

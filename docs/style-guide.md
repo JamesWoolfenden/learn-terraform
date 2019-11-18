@@ -10,7 +10,7 @@
 8. PRs to use names like feature-_and fix-_.
 9. Each test project should have a jenkinsfile and make file.
 10. Ensure that all variables and objects are used (VScode can tell you if variables are actually used).
-11. Use data resources over hardcoding.
+11. Use data resources over hard-coding.
 12. Use common_tags to help you follow a tagging strategy.
 13. Set Versions for providers if possible.
 14. Automate build process for modules.

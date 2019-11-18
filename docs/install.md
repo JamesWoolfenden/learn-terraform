@@ -137,7 +137,7 @@ That's a lot of commands, however there are only handful of actually common comm
 
 ### Init
 
-This command sets up the project, gets providers and connects any defined backends.
+This command sets up the project, gets providers and connects any defined back-ends.
 
 ```cli
 terraform init
@@ -179,7 +179,7 @@ The plugins hold the downloaded copies of the executable providers.
 
 ### Plan
 
-What would happen on an Apply. The commnad is a hangover from older versions of Terraform, the apply command now includes a plan stage by default.
+What would happen on an Apply. The command is a hangover from older versions of Terraform, the apply command now includes a plan stage by default.
 
 ```cli
 $ terraform plan
@@ -305,7 +305,7 @@ terraform taint aws_instance.web
 
 ## Modifying existing infrastructure
 
-If the definition differs from the existing state captured. Some properties changing causes exsisting objects to be modified others the recreation.
+If the definition differs from the existing state captured. Some properties changing causes existing objects to be modified others the recreation.
 
 How can I tell what which will happen?
 
@@ -333,6 +333,6 @@ And usually in this order.
     ```
 
 !!!Note Extras
-[WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
-
+    [WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
+    
     [How to set up WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
