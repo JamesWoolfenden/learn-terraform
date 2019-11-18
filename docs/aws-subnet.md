@@ -143,7 +143,7 @@ That's a complete set of public subnets. The next step would be to make a set of
 
 Not only can you get Design patterns to create your base networking, but you can get the Terraform as well, written by the Platform itself, so as setting up the basic VPC structure in AWS is a solved problem, you can use one of a number of tried and tested designs from the registry:
 
-!!!Note 
+!!!Note
     <https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/1.60.0> has nearly 900k uses and rising, thats a lots of field testing and it saves a tonne of typing.
     
     <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html>
