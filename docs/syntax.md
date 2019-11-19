@@ -240,7 +240,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-I have had to use this in the past on objects, and while the provider said they were created, they were actually still in the process of being created, and being replicated across regions on there way to be eventually consistent.
+I have had to use this in the past on objects, and while the provider said they were created, they were actually still in the process of being created, and being replicated across regions on their way to being consistent.
 
 ### depends_on with modules
 
