@@ -231,7 +231,16 @@ One of the awesome things that Terraform normally just does correctly, nearly al
 ### depends_on
 
 You can set the **depends_on** keyword on a resource to force a dependency, it shouldn't be needed.
-I have had to use in the past on objects that while the provider said they were created, were actually in the process of being created, being replication across regions and eventually consistent.
+
+```terraform
+resource "aws_instance" "web" {
+  depends_on = [aws.aws_iam_instance_profile.stuff]
+
+  # ...
+}
+```
+
+I have had to use this in the past on objects, and while the provider said they were created, they were actually still in the process of being created, and being replicated across regions on there way to be eventually consistent.
 
 ### depends_on with modules
 
