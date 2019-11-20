@@ -9,7 +9,6 @@
         "dynamodb",
         "openssh",
         "subnetwork",
-        "versioning",
         "xenial"
     ],
     "cSpell.enabled": true,

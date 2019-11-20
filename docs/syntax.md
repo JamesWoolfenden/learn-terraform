@@ -34,8 +34,8 @@ When to use a Provisioner
 
 When not
 
-- Installing anything on a new instance
-  Terraform is for making infrastructure and for managing "Cattle". If you find your self wanting to install a lot of components you should be making new components via tools like Packer.
+- Installing anything on a new instance.
+  Terraform is for making infrastructure, and for managing "Cattle". If you find your self wanting to install a lot of components, you should be making new component via tools like Packer.
 
 ### Remote-Exec
 
@@ -70,7 +70,7 @@ on_failure = "continue"
 
     Habitat provisioner
 
-    Salt-masterless Provioner
+    Salt-masterless Provisoner
 
 ## Resources
 
