@@ -4,5 +4,5 @@ resource "aws_subnet" "public" {
   cidr_block        = local.public_cidrs[count.index]
   availability_zone = data.aws_availability_zones.available.names[count.index]
 
-  tags = "${merge(var.common_tags, map("Type", "Public"))}"
+  tags = merge(var.common_tags, map("Type", "Public"))
 }
