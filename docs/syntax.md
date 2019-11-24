@@ -21,7 +21,7 @@ If you find yourself wanting to install packages at launch with **remote-exec** 
 
 ### Connections
 
-Remote Provisioners need authentication, probably via SSH [God forbid it **winrm**]. So you now have SSH key, password or certificate management issues. You also need to be on a network that allows it. You may have to connect through a bastion host.
+Remote Provisioner's need authentication, probably via SSH [God forbid it **winrm**]. So you now have SSH key, password or certificate management issues. You also need to be on a network that allows it. You may have to connect through a bastion host.
 
 ### Connection forwarding
 
@@ -76,13 +76,89 @@ on_failure = "continue"
 
 This is the main component class in Terraform, resource are the infrastructure objects you're trying to create.
 
-### Providers
+## Providers
 
-Multiple use
-todo
+### Passing Provider to Module
 
-Passing to Modules
-todo
+How do I pass the provider and its configuration into a module?
+
+The default provider is passed in without you seeing anything, but a non default or extra one is very different.
+
+- define a Provider **provider.secondary.tf**
+
+```terraform
+provider "aws" {
+  alias   = "secondary"
+  region  = "us-east-1"
+  version = "2.35.0"
+}
+```
+
+and then pass it in the module definition **module.stuff.tf**
+
+```terraform
+module "stuff" {
+...
+providers = {
+    aws = "aws.secondary"
+  }
+}
+```
+
+Easy enough.
+
+### Passing multiple providers
+
+What happens if you need to pass 2 different defined providers?
+
+Then define one as the default, and one with a named alias and pass them to the module.
+
+```terraform
+module "cassandra" {
+  source        = "../../"
+  instance_type = var.instance_type
+  common_tags   = var.common_tags
+  providers = {
+    aws=aws
+    aws.secondary = "aws.useast"
+  }
+}
+```
+
+And then you can try and reference the providers:
+
+```terraform
+resource "aws_instance" "remote-cassandra-node3" {
+  provider      = aws.secondary
+  key_name      = element(module.ssh-key-secondary.keys, 0)
+  ami           = data.aws_ami.ubuntu-secondary.image_id
+  instance_type = var.instance_type
+
+  root_block_device {
+    volume_type           = "standard"
+    volume_size           = 100
+    delete_on_termination = false
+  }
+
+  tags = var.common_tags
+}
+```  
+
+Now I almost thought it could just be that easy, but when you plan/apply you get:
+
+!!! error
+    Error: missing provider module.cassandra.provider.aws.secondary
+
+The answer is to create an empty Provider in your module **provider.secondary.tf** and your golden:
+
+```terraform
+provider "aws" {
+  alias="secondary"
+}
+```
+
+!!!Note
+    Samples from the module <https://github.com/JamesWoolfenden/terraform-aws-cassandra>
 
 ### Functions
 
