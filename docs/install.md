@@ -20,15 +20,22 @@ terraform -v
 
 You'll need to update your path to pick up the exe on Windows.
 
-There's still no official package manager support on linux <https://github.com/hashicorp/terraform/issues/17794>, so it's just the binaries.
+There's still no official package manager support on Linux <https://github.com/hashicorp/terraform/issues/17794>, so it's just the binaries and getting them in your path.
 
-Terraform is now installed, the next step is to try running it, to do any useful work this would be against and using a cloud provider, and that requires Authentication.
+Verify you have Terraform set-up with:
+
+```cli
+$ terraform --version
+Terraform v0.12.20
+```
+
+Now we have Terraform now installed, the next step is to try running it. To do any useful work, this would be against and using a Cloud provider, [e.g. AWS] and for that we require Authentication.
 
 ## Authentication
 
 ### Basic Authentication with the AWS Provider
 
-Install the AWS Cli and add your Key and Secret.
+Install the AWS Cli and add your Key and Secret.You can also use the new Cli too <https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html>.
 
 ```mac tab="mac"
 brew install aws-cli
@@ -38,7 +45,13 @@ brew install aws-cli
 cinst aws-cli
 ```
 
-You will either be supplied you cli credentials by your administrator or you can obtain your own from your own user IAM section.
+Verify that with:
+```cli
+$ aws --version
+aws-cli/1.16.303 Python/3.6.0 Windows/10 botocore/1.13.39
+```
+
+You will either be supplied you Cli credentials by your AWS administrator or you can obtain your own from your own user IAM section.
 
 ```cli
 $ aws configure
@@ -48,7 +61,7 @@ Default region name [eu-west-1]:
 Default output format [json]:
 ```
 
-There are many more way to provide AWS Authentication than this.
+There are many more way to provide AWS Authentication than just this.
 Old examples may show the hard-coding of secrets or the use of vars to then pass them in. Do not.
 
 ```aws
@@ -59,7 +72,7 @@ provider "aws" {
 }
 ```
 
-Open the sub-folder **basic-aws-auth** in your console. Validate your auth set-up by executing **terraform init** and then **terraform apply**:
+Open the sub-folder **basic-aws-auth** in your console. Validate your authentation set-up by executing **terraform init** and then **terraform apply**:
 
 <img src="https://gist.github.com/JamesWoolfenden/be86879e4e549c74e2278f10f044cd81/raw/956b0cb08c91157bbe2e0db571110c36212a9a1c/termtosvg_ej_gax9u.svg?sanitize=true">
 
@@ -93,7 +106,7 @@ Instead of updating your providers, save yourself some time and create yourself 
 
 ## Terraform commands
 
-Terraform is a command line tool, to see its usage just Type Terraform at your console now.
+Terraform is a command line tool, to see its usage, just Type Terraform at your console now.
 
 ```shell
 $ terraform
@@ -133,7 +146,7 @@ All other commands:
     state              Advanced state management
 ```
 
-That's a lot of commands, however there are only handful of actually common commands, 90% of the time it is an just Terraform and:
+That's a lot of commands, however there are only handful of actually common commands that you really use, 90% of the time it is an just Terraform and:
 
 ### Init
 
@@ -157,7 +170,7 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-Terraform init can be thought of an equivalent to git init, it downloads the provider executable, modules and does an initial syntax check, all into a .terraform folder.
+Terraform init can be thought of an equivalent to git init, it downloads the provider executable, modules and does an initial syntax check, all into a **.terraform** folder.
 
 For the full description its:
 
@@ -165,7 +178,7 @@ For the full description its:
 terraform init --help
 ```
 
-if you open a .terraform folder you find
+if you open a **.terraform** folder you find
 
 ```shell
 $ ls -l
@@ -186,7 +199,6 @@ $ terraform plan
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
 persisted to local or remote state storage.
-
 
 ------------------------------------------------------------------------
 
