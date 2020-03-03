@@ -332,6 +332,8 @@ $  terraforming s3 --tfstate
 
 ## [Terraformer](https://github.com/GoogleCloudPlatform/terraformer)
 
+You'll need to install this, from <https://github.com/GoogleCloudPlatform/terraformer/releases/latest>It supports GCP, AWS or a number of other resources. It generates the templates and the state file on a resource type basis.
+
 This is a more sophisticated tool and has support for many more providers. You will need to have set-up the providers already.
 
 ```cli
