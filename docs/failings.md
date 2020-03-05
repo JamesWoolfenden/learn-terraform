@@ -13,4 +13,4 @@
 
 - naming [aws fault] or recreating objects that have just been destroyed
 
-- API gateway has its own concept of environments/layers and it's structure varies according to the code. 
+- API gateway has its own concept of environments/layers and it's structure varies according to the code.

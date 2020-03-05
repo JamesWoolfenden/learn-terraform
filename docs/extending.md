@@ -15,7 +15,7 @@ mkdir -p $HOME/.terraform.d/plugins
 ## Unapproved providers
 
 - snowflake
-https://github.com/chanzuckerberg/terraform-provider-snowflake
+<https://github.com/chanzuckerberg/terraform-provider-snowflake>
 
 ## Extending Terraform
 

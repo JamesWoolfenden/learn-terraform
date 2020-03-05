@@ -127,7 +127,7 @@ terraform.tfstate
 
 ### .pre-commit-config.yaml
 
-Has a standard set of pre-commit hooks for working with Terraform and AWS. You'll need to install the pre-commit framework https://pre-commit.com/#install. And after that you need to add this file to your new repository **pre-commit-config.yaml**, in the root:
+Has a standard set of pre-commit hooks for working with Terraform and AWS. You'll need to install the pre-commit framework <https://pre-commit.com/#install>. And after that you need to add this file to your new repository **pre-commit-config.yaml**, in the root:
 
 ```yml
 ---

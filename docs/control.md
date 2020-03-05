@@ -64,7 +64,7 @@ To set up an account for use by applications, to control account level resources
 
 When to use:
 Some objects are neither the landing Zone nor a single services application code.
-Each environment/workspace <name> has a build process and life-cycle.
+Each environment/workspace '<name>' has a build process and life-cycle.
 
 ```tree
 ├───eks
