@@ -48,6 +48,7 @@ nav:
       - Route 53: aws-dns.md
       - gcp: gcp-dns.md
   - Advanced State: adv-state.md
+  - Structure: control.md
   - Modules:
       - Creating: module.md
       - Github Actions: github-actions.md
@@ -63,6 +64,8 @@ nav:
       - Cloudwatch: aws-cloudwatch.md
   - Workspaces: workspaces.md
   - Terraform cloud: tfe.md
+  - Extending: extending.md
+  - Failings: failings.md
   - Style Guide: style-guide.md
   - Help: help.md
   - About: about.md

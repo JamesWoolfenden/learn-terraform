@@ -86,7 +86,7 @@ data "template_file" "credstash_policy" {
 
 So that the rendered template can be used:
 
-```
+```HCL
 resource "aws_kms_key" "credstash" {
   depends_on = ["null_resource.waiter"]
 

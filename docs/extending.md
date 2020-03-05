@@ -1,14 +1,18 @@
 
-# Custom  Terraform
+# Custom Terraform
 
 ## How to use an unapproved provider
 
-Get binary from Github
-Unzip the zip file
-Then move exe binary to $HOME/.terraform.d/plugins directory
-mkdir -p $HOME/.terraform.d/plugins
+Get the binary (i.e. from Github).
+Unzip the zip file.
+Then move exe binary to **$HOME/.terraform.d/plugins** directory.
+Ensure that you have the cache folder.
 
-Unapproved providers
+```cli
+mkdir -p $HOME/.terraform.d/plugins
+```
+
+## Unapproved providers
 
 - snowflake
 https://github.com/chanzuckerberg/terraform-provider-snowflake
