@@ -1,16 +1,16 @@
-# Failing
+# Failings
 
 ## When Terraform isn't great
 
-- objects that take a long time to create
-  Active Directory integrations, Elastic search clusters, Kubernetes clusters
+- Objects that take a long time to create are suitable candidates.
+  Active Directory integrations, Elastic search clusters, Kubernetes clusters can all take > 15 to 30 minutes to create.
 
-- objects that are fragile
-  Some AWS resources are built with Cloudformation behind the scenes, any changes even minor take forever.
+- Objects that are fragile.
+  Some AWS resources are built with Cloudformation behind the scenes, any changes, even minor can take forever.
 
-- objects with significant cascading effects
+- Objects with significant cascading effects.
   Creating and modifying Active Directory
 
-- naming [aws fault] or recreating objects that have just been destroyed
+- Naming [aws fault] or recreating objects that have just been destroyed
 
-- API gateway has its own concept of environments/layers and it's structure varies according to the code. 
+- API Gateway has its' own concept of environments/layers and can create a complex structure in Tedrraform that varies according to the code where no obvious model to make a module exists. 
