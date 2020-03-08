@@ -114,7 +114,7 @@ extra:
       link: "https://linkedin.com/company/slalom-consulting/"
 
 # Copyright
-copyright: "Copyright &copy; 2019 - 2019 Slalom, LLC"
+copyright: "Copyright &copy; 2019 - 2020 Slalom, LLC"
 site_author: "James Woolfenden"
 google_analytics:
   ["UA-151885688-1", "slalom-consulting-ltd.github.io/learn-terraform/"]
