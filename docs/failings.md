@@ -13,4 +13,4 @@
 
 - Naming [aws fault] or recreating objects that have just been destroyed
 
-- API Gateway has its' own concept of environments/layers and can create a complex structure in Tedrraform that varies according to the code where no obvious model to make a module exists. 
+- API Gateway has its' own concept of environments/layers and can create a complex structure in Terraform that varies according to the code where no obvious model to make a module exists.
