@@ -14,7 +14,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/learn-terrafor
 
 ## Copyrights
 
-Copyright (c) 2019-2020 [Slalom, LLC](https://slalom.com)
+Copyright (c) 2019-2020 James Woolfenden
 
 ## License
 
@@ -43,11 +43,9 @@ under the License.
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
-[website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 [share_twitter]: https://twitter.com/intent/tweet/?text=https://github.com/JamesWoolfenden/learn-terraform-web
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=github.com/JamesWoolfenden/learn-terraform-web
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/learn-terraform-web

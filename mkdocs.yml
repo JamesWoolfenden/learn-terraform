@@ -107,14 +107,14 @@ extra:
   manifest: "manifest.webmanifest"
   social:
     - type: "github"
-      link: "https://github.com/slalom-consulting-ltd"
+      link: "https://github.com/jameswoolfenden"
     - type: "twitter"
-      link: "https://twitter.com/slalom"
+      link: "https://twitter.com/JimWoolfenden"
     - type: "linkedin"
-      link: "https://linkedin.com/company/slalom-consulting/"
+      link: "https://www.linkedin.com/in/jameswoolfenden/"
 
 # Copyright
-copyright: "Copyright &copy; 2019 - 2020 Slalom, LLC"
+copyright: "Copyright &copy; 2019 - 2020 James Woolfenden"
 site_author: "James Woolfenden"
 google_analytics:
-  ["UA-151885688-1", "slalom-consulting-ltd.github.io/learn-terraform/"]
+  ["UA-151885688-1", "jameswoolfenden.github.io/learn-terraform/"]

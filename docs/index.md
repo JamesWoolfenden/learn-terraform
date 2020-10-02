@@ -1,6 +1,6 @@
 # Learn Terraform
 
-[![Latest Release](https://img.shields.io/github/v/tag/slalom-consulting-ltd/learn-terraform.svg)](https://github.com/JamesWoolfenden/learn-terraform-web)
+[![Latest Release](https://img.shields.io/github/v/tag/jameswoolfenden/learn-terraform.svg)](https://github.com/JamesWoolfenden/learn-terraform-web)
 
 By [James Woolfenden](https://www.linkedin.com/in/jameswoolfenden/)
 
@@ -25,19 +25,19 @@ The first line starts with **Resource**, this declares the type of object, in th
 "aws_instance" is the type of resource, in this case an instance or EC2 Virtual Machine.
 "web" this is just the object name, the name is up to you. The brackets are a fairly typical declaration of an object, the opening must be on the first line.
 
-```ami           = data.aws_ami.xenial.id```
+`ami = data.aws_ami.xenial.id`
 
-The property ami is set to  *data.aws_ami.xenial.id*, *data* means its a data resource, of type *aws_ami* that's been called xenial and supply the property *id*.
+The property ami is set to _data.aws_ami.xenial.id_, _data_ means its a data resource, of type _aws_ami_ that's been called xenial and supply the property _id_.
 
-``` instance_type="t2.micro"```
+` instance_type="t2.micro"`
 
-The property *instance_type* has been hard-coded to the string value.
+The property _instance_type_ has been hard-coded to the string value.
 
-```tags          = var.common_tags```
+`tags = var.common_tags`
 
-The tags property has been set to *var.common_tags*, which is a declared variable called common_tags.
+The tags property has been set to _var.common_tags_, which is a declared variable called common_tags.
 
-Then when Terraform is run, it will check and create the resource if it's not existing already. If it's different, it will fix the *drift* in the object to make it as the specification.
+Then when Terraform is run, it will check and create the resource if it's not existing already. If it's different, it will fix the _drift_ in the object to make it as the specification.
 
 ### The tool
 

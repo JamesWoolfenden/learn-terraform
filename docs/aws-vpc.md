@@ -264,9 +264,6 @@ repos:
       - id: terraform_fmt
   - repo: git://github.com/pre-commit/pre-commit-hooks
     rev: v2.4.0
-    stages:
-      - commit
-      - push
     hooks:
       - id: detect-aws-credentials
       - id: detect-private-key
@@ -305,27 +302,27 @@ There is also is a default Makefile for running Terraform
 all: init plan build
 
 init:
-	rm -rf .terraform/modules/
-	terraform init -reconfigure
+  rm -rf .terraform/modules/
+  terraform init -reconfigure
 
 plan: init
-	terraform plan -refresh=true
+  terraform plan -refresh=true
 
 build: init
-	terraform apply -auto-approve
+  terraform apply -auto-approve
 
 check: init
-	terraform plan -detailed-exitcode
+  terraform plan -detailed-exitcode
 
 destroy: init
-	terraform destroy -force
+  terraform destroy -force
 
 docs:
-	terraform-docs md . > README.md
+  terraform-docs md . > README.md
 
 valid:
-	tflint
-	terraform fmt -check=true -diff=true
+  tflint
+  terraform fmt -check=true -diff=true
 ```
 
 If you plan to turn this folder into a repo you need to install the config (at the root of the repo)
@@ -337,8 +334,8 @@ pre-commit installed at .\.git\hooks\pre-commit
 ```
 
 !!! Note Links
-    Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
-    
+Tf-scaffold <https://github.com/JamesWoolfenden/tf-scaffold>
+
     Help documents for Terraform AWS Virtual Private Cloud (VPC) object are here <https://www.terraform.io/docs/providers/aws/r/vpc.html>
 
     VPC designs <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html>
