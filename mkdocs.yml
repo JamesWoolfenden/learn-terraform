@@ -71,6 +71,9 @@ nav:
   - About: about.md
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
   favicon: "assets/images/favicon.ico"
 repo_name: "jamesWoolfenden/learn-terraform-web"
 repo_url: "https://github.com/jamesWoolfenden/learn-terraform-web"
@@ -106,11 +109,11 @@ plugins:
 extra:
   manifest: "manifest.webmanifest"
   social:
-    - type: "github"
+    - icon: fontawesome/brands/github-alt
       link: "https://github.com/jameswoolfenden"
-    - type: "twitter"
+    - icon: fontawesome/brands/twitter
       link: "https://twitter.com/JimWoolfenden"
-    - type: "linkedin"
+    - icon: fontawesome/brands/linkedin
       link: "https://www.linkedin.com/in/jameswoolfenden/"
 
 # Copyright
