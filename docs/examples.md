@@ -2,10 +2,10 @@
 
 All the examples in this site are available from the Source Repo:
 
-[https://github.com/JamesWoolfenden/learn-terraform-web/tree/master/examples](https://github.com/JamesWoolfenden/learn-terraform-web/tree/master/examples)
+[https://github.com/JamesWoolfenden/learn-terraform/tree/master/examples](https://github.com/JamesWoolfenden/learn-terraform/tree/master/examples)
 
 ```git
-git clone --depth 1 git@github.com:JamesWoolfenden/learn-terraform-web.git
+git clone --depth 1 git@github.com:JamesWoolfenden/learn-terraform.git
 ```
 
 The Examples are in the Examples Sub-directory.

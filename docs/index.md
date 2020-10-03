@@ -1,6 +1,6 @@
 # Learn Terraform
 
-[![Latest Release](https://img.shields.io/github/v/tag/jameswoolfenden/learn-terraform.svg)](https://github.com/JamesWoolfenden/learn-terraform-web)
+[![Latest Release](https://img.shields.io/github/v/tag/jameswoolfenden/learn-terraform.svg)](https://github.com/JamesWoolfenden/learn-terraform)
 
 By [James Woolfenden](https://www.linkedin.com/in/jameswoolfenden/)
 

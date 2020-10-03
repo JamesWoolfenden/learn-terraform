@@ -75,8 +75,8 @@ theme:
     - navigation.tabs
     - navigation.instant
   favicon: "assets/images/favicon.ico"
-repo_name: "jamesWoolfenden/learn-terraform-web"
-repo_url: "https://github.com/jamesWoolfenden/learn-terraform-web"
+repo_name: "jamesWoolfenden/learn-terraform"
+repo_url: "https://github.com/jamesWoolfenden/learn-terraform"
 markdown_extensions:
   - admonition
   - codehilite

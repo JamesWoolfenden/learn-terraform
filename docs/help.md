@@ -4,13 +4,13 @@ If its been useful, let me know. If it's out of date or broken also. I'll apprec
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/JamesWoolfenden/learn-terraform-web/issues).
+File a GitHub [issue](https://github.com/JamesWoolfenden/learn-terraform/issues).
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/JamesWoolfenden/learn-terraform-web/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/JamesWoolfenden/learn-terraform/issues) to report any bugs or file feature requests.
 
 ## Copyrights
 
@@ -46,8 +46,8 @@ under the License.
 [github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [twitter]: https://twitter.com/JimWoolfenden
-[share_twitter]: https://twitter.com/intent/tweet/?text=https://github.com/JamesWoolfenden/learn-terraform-web
-[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=github.com/JamesWoolfenden/learn-terraform-web
-[share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/learn-terraform-web
-[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/JamesWoolfenden/learn-terraform-web
-[share_email]: mailto:?subject=learn-terraform&body=https://github.com/JamesWoolfenden/learn-terraform-web
+[share_twitter]: https://twitter.com/intent/tweet/?text=https://github.com/JamesWoolfenden/learn-terraform
+[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=github.com/JamesWoolfenden/learn-terraform
+[share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/learn-terraform
+[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/JamesWoolfenden/learn-terraform
+[share_email]: mailto:?subject=learn-terraform&body=https://github.com/JamesWoolfenden/learn-terraform
