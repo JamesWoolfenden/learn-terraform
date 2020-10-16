@@ -12,4 +12,5 @@ resource "aws_db_instance" "employee" {
   storage_type           = "gp2"
   username               = "Sleepycat"
   vpc_security_group_ids = [aws_security_group.employee.id]
+  storage_encrypted = true
 }
