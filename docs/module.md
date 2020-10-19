@@ -66,7 +66,7 @@ Or have your own CI process for your modules.
 You need to tag and then push the tag to the upstream repository.
 
 !!! note "Git and tags"
-You can also set your git config to always follow tags:
+    You can also set your git config to always follow tags:
 
     ```cli
     git config --global push.followTags true
@@ -352,7 +352,7 @@ In there you'll need a **provider.aws.tf**
 
 ```terraform
 provider "aws" {
-  version = "2.31.0"
+  version = "3.11.0"
 }
 ```
 

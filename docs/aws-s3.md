@@ -56,7 +56,7 @@ resource "aws_s3_bucket" "statebucket" {
     Notice that this is a private bucket and that it has versioning and delete protection.
     
 Add the file **data.aws_caller_identity.current.tf** to return the AWS account number.
-    
+
 ```terraform
 data "aws_caller_identity" "current" {}
 ```
@@ -69,6 +69,7 @@ resource "aws_dynamodb_table" "dynamodb-state-lock" {
    hash_key       = "LockID"
    read_capacity  = 20
    write_capacity = 20
+   point_in_time-recovery = enabled
 
    attribute {
     name = "LockID"

@@ -8,8 +8,9 @@ resource "aws_db_instance" "employee" {
   parameter_group_name   = "default.mysql5.7"
   password               = "thr33littlew0rds"
   skip_final_snapshot    = true
-  publicly_accessible    = true
+  publicly_accessible    = false
   storage_type           = "gp2"
+  storage_encrypted      = true
   username               = "Sleepycat"
   vpc_security_group_ids = [aws_security_group.employee.id]
 }

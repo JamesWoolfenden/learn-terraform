@@ -32,7 +32,7 @@ resource "aws_db_instance" "employee" {
   instance_class       = "db.t2.micro"
   name                 = "mydb"
   skip_final_snapshot  = true
-  publicly_accessible  = true
+  publicly_accessible  = false
   username             = "Sleepycat"
   password             = "thr33littlew0rds"
   parameter_group_name = "default.mysql5.7"
@@ -81,7 +81,7 @@ Terraform will perform the following actions:
       parameter_group_name:       "default.mysql5.7"
       password:                   <sensitive>
       port:                       <computed>
-      publicly_accessible:        "true"
+      publicly_accessible:        "false"
       replicas.#:                 <computed>
       resource_id:                <computed>
       skip_final_snapshot:        "false"
@@ -176,7 +176,7 @@ When you plan again, it now raises this issue:
 
 This is because aws_db_instance.employee is now a list, the output reference now needs to support the blat array reference like this:
 
-aws_db_instance.employee.*.endpoint
+aws_db_instance.employee.\*.endpoint
 
 Now try plan again and you'll find this plans just fine but it but you'll see that it will make 2 databases instances.
 
