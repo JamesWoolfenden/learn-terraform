@@ -3,5 +3,5 @@ resource "aws_iam_policy" "heredoc" {
   path        = "/"
   description = "An example policy"
 
-  policy = "${data.aws_iam_policy_document.heredoc.json}"
+  policy = data.aws_iam_policy_document.heredoc.json
 }

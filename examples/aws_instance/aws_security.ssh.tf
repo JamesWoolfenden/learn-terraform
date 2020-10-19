@@ -8,6 +8,7 @@ resource aws_security_group ssh {
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
+    description="ssh"
   }
 
   egress {
@@ -15,5 +16,6 @@ resource aws_security_group ssh {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+    description="outbound"
   }
 }
