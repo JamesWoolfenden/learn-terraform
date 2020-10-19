@@ -20,6 +20,7 @@ mkdir -p $HOME/.terraform.d/plugins
 ## Extending Terraform
 
 How to write a provider
+
 <https://www.terraform.io/docs/extend/writing-custom-providers.html>
 <http://blog.jfabre.net/2017/01/22/writing-terraform-provider/>
 <https://medium.com/spaceapetech/creating-a-terraform-provider-part-1-ed12884e06d7>
