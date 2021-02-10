@@ -117,7 +117,7 @@ extra:
       link: "https://www.linkedin.com/in/jameswoolfenden/"
 
 # Copyright
-copyright: "Copyright &copy; 2019 - 2020 James Woolfenden"
+copyright: "Copyright &copy; 2019 - 2021 James Woolfenden"
 site_author: "James Woolfenden"
 google_analytics:
   ["UA-151885688-1", "jameswoolfenden.github.io/learn-terraform/"]
