@@ -1,5 +1,5 @@
 variable "common_tags" {
-  type = map
+  type = map(any)
 }
 
 variable "cidr" {}

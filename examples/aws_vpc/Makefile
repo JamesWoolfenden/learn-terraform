@@ -4,8 +4,11 @@
 
 all: init plan build
 
+clean:
+	rm -rf .terraform
+
 init:
-	rm -rf .terraform/modules/
+	rm -rf .terraform
 	terraform init -reconfigure
 
 plan: init

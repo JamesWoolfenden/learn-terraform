@@ -1,4 +1,4 @@
-resource aws_s3_bucket statebucket {
+resource "aws_s3_bucket" "statebucket" {
   #checkov:skip=CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
 
   bucket        = "${data.aws_caller_identity.current.account_id}-terraform-state"
