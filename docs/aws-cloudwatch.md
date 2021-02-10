@@ -53,4 +53,4 @@ resource "aws_cloudwatch_event_target" "target" {
 ```
 
 !!!Note Links
-https://github.com/JamesWoolfenden/terraform-aws-cloudwatch-s3
+    <https://github.com/JamesWoolfenden/terraform-aws-cloudwatch-s3>

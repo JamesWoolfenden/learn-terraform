@@ -29,7 +29,7 @@ The first line starts with **Resource**, this declares the type of object, in th
 
 The property ami is set to _data.aws_ami.xenial.id_, _data_ means its a data resource, of type _aws_ami_ that's been called xenial and supply the property _id_.
 
-` instance_type="t2.micro"`
+`instance_type="t2.micro"`
 
 The property _instance_type_ has been hard-coded to the string value.
 

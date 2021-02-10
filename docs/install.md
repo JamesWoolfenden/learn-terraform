@@ -356,5 +356,5 @@ And usually in this order.
 
 !!!Note Extras
     [WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
-    
+
     [How to set up WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)

@@ -70,7 +70,7 @@ on_failure = "continue"
 
     Habitat provisioner
 
-    Salt-masterless Provisoner
+    Salt-masterless Provisioner
 
 ## Resources
 
@@ -142,7 +142,7 @@ resource "aws_instance" "remote-cassandra-node3" {
 
   tags = var.common_tags
 }
-```  
+```
 
 Now I almost thought it could just be that easy, but when you plan/apply you get:
 

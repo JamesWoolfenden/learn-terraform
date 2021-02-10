@@ -366,4 +366,4 @@ total 4
 ```
 
 This is great but you'll have to refactor the reosurce ids to objects names and merge the resource types.
-You'll also need to merge the state files, be careful. You can use <https://github.com/mmalecki/terraform-state-merge> to merge. 
+You'll also need to merge the state files, be careful. You can use <https://github.com/mmalecki/terraform-state-merge> to merge.

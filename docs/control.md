@@ -56,7 +56,7 @@ To set up an account for use by applications, to control account level resources
 - It's not really CI if you have a confirm an apply.
 - For many account level objects destroying them, rarely practical makes sense  (AD, IAM, AD, Cloudtrail and other Security related resources)
 - Nuclear level blast radius.
-  
+
 !!! note
     Should never contain module code.
 
@@ -183,18 +183,18 @@ Below is the layout for a module for activemq
     │   validate.ps1
     │   validate.sh
     │   variables.tf
-    │   
+    │
     ├───.chglog
     │       CHANGELOG.tpl.md
     │       config.yml
-    │       
+    │
     ├───.dependabot
     │       config.yml
-    │       
+    │
     ├───.github
     │   └───workflows
     │           main.yml
-    │           
+    │
     └───example
         └───examplea
                 data.network.tf

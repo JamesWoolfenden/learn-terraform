@@ -54,7 +54,7 @@ resource "aws_s3_bucket" "statebucket" {
 
 !!! Note Callouts
     Notice that this is a private bucket and that it has versioning and delete protection.
-    
+
 Add the file **data.aws_caller_identity.current.tf** to return the AWS account number.
 
 ```terraform

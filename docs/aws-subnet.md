@@ -145,5 +145,5 @@ Not only can you get Design patterns to create your base networking, but you can
 
 !!!Note
     <https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/1.60.0> has nearly 900k uses and rising, thats a lots of field testing and it saves a tonne of typing.
-    
+
     <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html>

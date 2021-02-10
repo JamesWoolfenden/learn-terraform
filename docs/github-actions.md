@@ -62,7 +62,7 @@ Then when you commit a change to master this action will init and validate on th
 
 !!!Note
     This example extends:
-  
+
     [https://github.com/marketplace/actions/github-tag-bump](https://github.com/marketplace/actions/github-tag-bump)
 
     [https://www.hashicorp.com/blog/continuous-integration-for-terraform-modules-with-github-actions/](https://www.hashicorp.com/blog/continuous-integration-for-terraform-modules-with-github-actions/)
