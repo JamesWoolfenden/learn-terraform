@@ -5,9 +5,9 @@ resource "tls_private_key" "ssh" {
 }
 
 variable "key_names" {
-  default=["vulcan"]
+  default = ["vulcan"]
 }
 
 output "ssh" {
-    value=tls_private_key.ssh
+  value = tls_private_key.ssh
 }

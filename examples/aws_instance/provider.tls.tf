@@ -1,3 +1,2 @@
-provider tls {
-  version = "2.1.1"
+provider "tls" {
 }
