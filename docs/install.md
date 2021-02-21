@@ -2,15 +2,15 @@
 
 Terraform is available from the popular platform package managers for Macs and Windows.
 
-```mac tab="mac"
+```mac
 brew install terraform
 ```
 
-```powershell tab="Powershell"
+```Powershell
 cinst Terraform
 ```
 
-```bash tab="linux"
+```shell
 export TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version')
 curl --silent --output terraform.zip "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 unzip terraform.zip ; rm -f terraform.zip; chmod +x terraform
@@ -37,15 +37,16 @@ Now we have Terraform now installed, the next step is to try running it. To do a
 
 Install the AWS Cli and add your Key and Secret.You can also use the new Cli too <https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html>.
 
-```mac tab="mac"
+```mac fct_label="mac"
 brew install aws-cli
 ```
 
-```powershell tab="Powershell"
+```powershell fct_label="Powershell"
 cinst aws-cli
 ```
 
 Verify that with:
+
 ```cli
 $ aws --version
 aws-cli/1.16.303 Python/3.6.0 Windows/10 botocore/1.13.39
@@ -342,19 +343,19 @@ And usually in this order.
 
     ### Setting up a Windows plug-in cache
 
-    ```powershell tab="powershell"
+    ```powershell fct_label="powershell"
     ni $env:APPDATA\terraform.rc
     Add-Content $env:APPDATA\terraform.rc "plugin_cache_dir   = `"$HOME\\.terraform.d\\plugin-cache`""
     mkdir "$HOME/.terraform.d/plugin-cache"
     ```
 
-    ```shell tab="*nix"
+    ```shell fct_label="*nix"
     touch ~/.terraformrc
     echo plugin_cache_dir = \"$HOME/.terraform.d/plugin-cache\" >> ~/.terraformrc
     mkdir "$HOME/.terraform.d/plugin-cache"
     ```
 
 !!!Note Extras
-    [WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
+[WSL Windows sub-system for Linux](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
 
     [How to set up WSL](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)

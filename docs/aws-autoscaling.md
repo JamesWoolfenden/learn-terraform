@@ -16,7 +16,7 @@ resource "aws_launch_configuration" "web" {
 }
 ```
 
-If the properties in a launch configuration look familar, its because they are used replace the **aws_instance** resoure, when combined with an Autoscaling group **aws_autoscaling_group.web.tf**.
+If the properties in a launch configuration look familiar, its because they are used replace the **aws_instance** resoure, when combined with an Autoscaling group **aws_autoscaling_group.web.tf**.
 
 ```terraform
 resource "aws_autoscaling_group" "web" {

@@ -6,7 +6,7 @@
 
 ## Bio
 
-I'm currently working as a Principal for Slalom and based out of London.
+I was working as a Principal for Slalom and based out of London, but more recently im with the Bridgecrew.
 I have a bit of experience in the DevOps field, I have worked for a number of consultancies
 directly and indirectly.
 

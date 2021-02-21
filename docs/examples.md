@@ -10,7 +10,7 @@ git clone --depth 1 git@github.com:JamesWoolfenden/learn-terraform.git
 
 The Examples are in the Examples Sub-directory.
 
-```powershell tab="Powershell"
+``` powershell
 $ls .\examples\
     Directory: C:\code\mkdocs\terraform\examples
 
@@ -31,7 +31,7 @@ d-----       22/10/2019     10:13                RDS-starter
 d-----       22/10/2019     10:13                trust_relationship
 ```
 
-```bash tab="*nix"
+``` shell
 $ ls -l
 total 0
 drwxrwxrwx 1 jim jim 512 Oct 22 10:13 RDS-starter
@@ -48,4 +48,3 @@ drwxrwxrwx 1 jim jim 512 Oct 22 10:13 iam_policy
 drwxrwxrwx 1 jim jim 512 Oct 22 10:13 inline_policy
 drwxrwxrwx 1 jim jim 512 Oct 22 10:13 trust_relationship
 ```
- 

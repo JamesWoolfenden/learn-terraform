@@ -66,7 +66,7 @@ Or have your own CI process for your modules.
 You need to tag and then push the tag to the upstream repository.
 
 !!! note "Git and tags"
-    You can also set your git config to always follow tags:
+You can also set your git config to always follow tags:
 
     ```cli
     git config --global push.followTags true
@@ -161,7 +161,7 @@ after_success:
 
 Add a function to your profile to add a function to your shell. That's \$PROFILE on Windows or ~/.bashrc on Linix.
 
-```powershell tab="powershell"
+```powershell fct_label="powershell"
 function scaffold {
    param(
       [parameter(mandatory=$true)]
@@ -182,7 +182,7 @@ function scaffold {
 }
 ```
 
-```bash tab="bash"
+```bash fct_label="bash"
 function scaffold() {
 if [ -z "$1" ]
 then

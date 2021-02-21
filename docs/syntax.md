@@ -138,6 +138,7 @@ resource "aws_instance" "remote-cassandra-node3" {
     volume_type           = "standard"
     volume_size           = 100
     delete_on_termination = false
+    encrypted             = true
   }
 
   tags = var.common_tags

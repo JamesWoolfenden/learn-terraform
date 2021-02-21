@@ -6,7 +6,7 @@ TODO
 
 TODO
 
-## Mananged state
+## Managed state
 
 TODO
 
