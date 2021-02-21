@@ -6,17 +6,17 @@
 <span class=" -Punctuation">}</span>
 </code></pre></div> <p>You can use the Git CLI, to tag your modules, when inside the Repository at the CLI/console:</p> <div class=highlight><pre><span></span><code>git tag -a <span class=s2>&quot;0.0.1&quot;</span> -m <span class=s2>&quot;Initial commit&quot;</span>
 git push --follow-tags
-</code></pre></div> <p>Or have your own CI process for your modules. You need to tag and then push the tag to the upstream repository.</p> <div class="admonition note"> <p class=admonition-title>Git and tags</p> </div> <p>You can also set your git config to always follow tags:</p> <div class=codehilite><pre><span></span><code>```cli
-git config --global push.followTags true
-```
+</code></pre></div> <p>Or have your own CI process for your modules. You need to tag and then push the tag to the upstream repository.</p> <div class="admonition note"> <p class=admonition-title>Git and tags</p> </div> <p>You can also set your git config to always follow tags:</p> <div class=codehilite><pre><span></span><code><span class=err>```</span><span class=n>cli</span><span class=w></span>
+<span class=n>git</span><span class=w> </span><span class=n>config</span><span class=w> </span><span class=o>--</span><span class=k>global</span><span class=w> </span><span class=n>push</span><span class=p>.</span><span class=n>followTags</span><span class=w> </span><span class=k>true</span><span class=w></span>
+<span class=err>```</span><span class=w></span>
 
-With the tags set and  pushed, you can now set the source reference to link to the tag:
+<span class=k>With</span><span class=w> </span><span class=n>the</span><span class=w> </span><span class=n>tags</span><span class=w> </span><span class=k>set</span><span class=w> </span><span class=ow>and</span><span class=w>  </span><span class=n>pushed</span><span class=p>,</span><span class=w> </span><span class=n>you</span><span class=w> </span><span class=n>can</span><span class=w> </span><span class=n>now</span><span class=w> </span><span class=k>set</span><span class=w> </span><span class=n>the</span><span class=w> </span><span class=n>source</span><span class=w> </span><span class=n>reference</span><span class=w> </span><span class=k>to</span><span class=w> </span><span class=n>link</span><span class=w> </span><span class=k>to</span><span class=w> </span><span class=n>the</span><span class=w> </span><span class=nl>tag</span><span class=p>:</span><span class=w></span>
 
-```terraform
-module &quot;S3&quot; {
-    source=&quot;git::git@github.com:JamesWoolfenden/terraform-aws-s3.git?ref=0.0.1&quot;
-}
-```
+<span class=err>```</span><span class=n>terraform</span><span class=w></span>
+<span class=k>module</span><span class=w> </span><span class=ss>&quot;S3&quot;</span><span class=w> </span><span class=err>{</span><span class=w></span>
+<span class=w>    </span><span class=n>source</span><span class=o>=</span><span class=ss>&quot;git::git@github.com:JamesWoolfenden/terraform-aws-s3.git?ref=0.0.1&quot;</span><span class=w></span>
+<span class=err>}</span><span class=w></span>
+<span class=err>```</span><span class=w></span>
 </code></pre></div> <h3 id=github-reference>Github reference</h3> <p>Terraform is smart enough to infer some of the source if it starts with github.</p> <div class=highlight><pre><span></span><code><span class=kr>module</span> <span class=s>&quot;S3&quot;</span> <span class=" -Punctuation">{</span>
 <span class=na>    source</span><span class=o>=</span><span class=s2>&quot;github.com/JamesWoolfenden/terraform-aws-s3&quot;</span>
 <span class=" -Punctuation">}</span>
