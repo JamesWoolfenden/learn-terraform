@@ -48,5 +48,6 @@
     "openssh",
     "subnetwork",
     "xenial"
-  ]
+  ],
+  "python.pythonPath": "C:\\Python39\\python.exe"
 }
